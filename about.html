@@ -7,7 +7,7 @@
 <meta name="description" content="Pioneer Federal Group is a veteran-founded government contracting company built on Marine Corps logistics experience and accountable execution.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,69 +16,67 @@
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="Pioneer Federal Group home">
       <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <circle cx="24" cy="24" r="22" stroke="#C9A84C" stroke-width="1"/>
-        <path d="M24 2 L27 17 L35 13 L31 21 L46 24 L31 27 L35 35 L27 31 L24 46 L21 31 L13 35 L17 27 L2 24 L17 21 L13 13 L21 17 Z" fill="#C9A84C"/>
-        <circle cx="24" cy="24" r="2.5" fill="#0C2340"/>
+        <circle class="ring" cx="24" cy="24" r="21" stroke-width="1" opacity="0.55" fill="none"/>
+        <path d="M24 8 C24.7 16.5 25.8 20.7 32 23.2 L40 24 L32 24.8 C25.8 27.3 24.7 31.5 24 40 C23.3 31.5 22.2 27.3 16 24.8 L8 24 L16 23.2 C22.2 20.7 23.3 16.5 24 8 Z"/>
       </svg>
-      <span class="name">Pioneer Federal Group<small>LLC · SDVOSB ·</small></span>
+      <span class="name">Pioneer Federal Group<small>SDVOSB · Georgia</small></span>
     </a>
     <button class="nav-toggle" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
       <a href="services.html">Capabilities</a>
-      <a href="contact.html">Contact</a>
+      <a href="about.html" class="active">About</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html" class="nav-cta">Contact Us</a>
     </div>
   </div>
 </nav>
 
 <header class="page-hero">
   <div class="wrap">
-    <span class="eyebrow">About Us</span>
-    <h1>Founded to Serve a Second Time.</h1>
+    <span class="eyebrow"><span class="dot"></span>About Us</span>
+    <h1>Founded to serve a second time.</h1>
     <p>Pioneer Federal Group was built on the belief that government agencies deserve contractors who take ownership of the mission. We are not driven by excuses. We are driven by execution.</p>
   </div>
-  <div class="meridian"></div>
 </header>
 
 <section class="section">
   <div class="wrap split">
     <div>
-      <span class="eyebrow dark">Our Story</span>
+      <span class="eyebrow dark"><span class="dot"></span>Our Story</span>
       <h2 style="margin-top:10px;font-size:clamp(26px,3.4vw,38px)">Our Story</h2>
-      <p style="margin-top:10px">Desi Pelaez enlisted in the United States Marine Corps as one of the first Marines in his family and served as an Aviation Supply Specialist (MOS 6672) at MCAS Beaufort, South Carolina, and MCAS Miramar, San Diego, California. During his service, he worked across logistics, financial accounting, warehouse operations, and squadron supply support, gaining firsthand experience in the systems and processes that keep mission-critical operations moving.</p>
-      <p style="margin-top:10px;color:var(--muted)">In addition to his logistics responsibilities, Desi served as a Marine Corps Martial Arts Instructor, training and mentoring fellow Marines while reinforcing the discipline and accountability that shape his approach to business today.</p>
-      <p style="margin-top:10px;color:var(--muted)">Pioneer Federal Group was founded alongside longtime friend and business partner Jonas Moreno. While Desi developed his experience through military service, Jonas built his through hands-on trades, operations, and entrepreneurship. With a background as a business owner, certified structural steel and pressurized pipe welder, and mechanic, Jonas brings hands-on experience and a strong commitment to quality, safety, and accountability. Together, they share one standard: do the work right and own the outcome.</p>
-      <p style="margin-top:10px;color:var(--muted)">Today, Pioneer Federal Group brings that same mindset to federal contracting: take ownership, communicate clearly, and deliver results clients can depend on.</p> 
+      <p style="margin-top:14px">Desi Pelaez enlisted in the United States Marine Corps as one of the first Marines in his family and served as an Aviation Supply Specialist (MOS 6672) at MCAS Beaufort, South Carolina, and MCAS Miramar, San Diego, California. During his service, he worked across logistics, financial accounting, warehouse operations, and squadron supply support, gaining firsthand experience in the systems and processes that keep mission-critical operations moving.</p>
+      <p style="margin-top:14px;color:var(--muted)">In addition to his logistics responsibilities, Desi served as a Marine Corps Martial Arts Instructor, training and mentoring fellow Marines while reinforcing the discipline and accountability that shape his approach to business today.</p>
+      <p style="margin-top:14px;color:var(--muted)">Pioneer Federal Group was founded alongside longtime friend and business partner Jonas Moreno. While Desi developed his experience through military service, Jonas built his through hands-on trades, operations, and entrepreneurship. With a background as a business owner, certified structural steel and pressurized pipe welder, and mechanic, Jonas brings hands-on experience and a strong commitment to quality, safety, and accountability. Together, they share one standard: do the work right and own the outcome.</p>
+      <p style="margin-top:14px;color:var(--muted)">Today, Pioneer Federal Group brings that same mindset to federal contracting: take ownership, communicate clearly, and deliver results clients can depend on.</p>
     </div>
-    <svg class="compass-line" viewBox="0 0 300 300" fill="none" aria-hidden="true">
-      <circle cx="150" cy="150" r="138" fill="#0C2340"/>
-      <circle cx="150" cy="150" r="132" stroke="#C9A84C" stroke-width="1" fill="none" opacity="0.7"/>
-      <path d="M150 67 L153.1 87.6 L163.4 81.6 L157.4 91.9 L178 95 L157.4 98.1 L163.4 108.4 L153.1 102.4 L150 123 L146.9 102.4 L136.6 108.4 L142.6 98.1 L122 95 L142.6 91.9 L136.6 81.6 L146.9 87.6 Z" fill="#C9A84C"/>
-      <text x="150" y="205" text-anchor="middle" font-family="'Public Sans', sans-serif" font-weight="700" font-size="65" fill="#C9A84C" letter-spacing="6">PFG</text>
-      <line x1="105" y1="220" x2="195" y2="220" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
-      <text x="150" y="240" text-anchor="middle" font-family="'Public Sans', sans-serif" font-weight="600" font-size="12" fill="#C9A84C" letter-spacing="3.5" opacity="0.8">SDVOSB</text>
-    </svg>
+    <div class="mark-panel">
+      <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <circle class="ring" cx="24" cy="24" r="21" stroke-width="1" fill="none"/>
+        <path d="M24 8 C24.7 16.5 25.8 20.7 32 23.2 L40 24 L32 24.8 C25.8 27.3 24.7 31.5 24 40 C23.3 31.5 22.2 27.3 16 24.8 L8 24 L16 23.2 C22.2 20.7 23.3 16.5 24 8 Z"/>
+      </svg>
+      <span class="tag">Semper Fidelis</span>
+    </div>
   </div>
 </section>
 
 <section class="section alt">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow dark">Leadership</span>
+      <span class="eyebrow dark"><span class="dot"></span>Leadership</span>
       <h2>Two roles. One standard.</h2>
     </div>
     <div class="people">
       <div class="person">
         <span class="role">Chief Executive Officer · Founder</span>
         <h3>Desi Pelaez</h3>
-        <div class="sub">U.S. Marine Corps Veteran · Managing Member</div>
+        <div class="sub">U.S. Marine Corps Veteran · Managing Member · 51% Owner</div>
         <p>Desi leads Pioneer Federal Group's overall direction, contract decisions, and customer relationships. He brings a Marine Corps mindset of discipline, ownership, and follow-through to every engagement.</p>
       </div>
       <div class="person">
         <span class="role">Chief Operating Officer</span>
         <h3>Jonas Moreno</h3>
-        <div class="sub">Co-Founder · Operations</div>
+        <div class="sub">Co-Founder · Member · Operations</div>
         <p>Jonas leads project execution across active task orders, including vendor communication, crew scheduling, and logistical support. Under the direction of Pioneer Federal Group's CEO, he keeps the work moving so commitments made are commitments kept.</p>
       </div>
     </div>
@@ -88,19 +86,22 @@
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow dark">How We Operate</span>
+      <span class="eyebrow dark"><span class="dot"></span>How We Operate</span>
       <h2>The standard we hold.</h2>
     </div>
     <div class="values">
       <div class="value">
+        <span class="num">01</span>
         <h3>Accountability First</h3>
         <p>One responsible contractor on every job. When we take a task order, we own the outcome through completion.</p>
       </div>
       <div class="value">
+        <span class="num">02</span>
         <h3>Disciplined Coordination</h3>
         <p>Military logistics taught us that execution lives in the details. Qualified personnel, clear schedules, and proactive communication keep the mission on track.</p>
       </div>
       <div class="value">
+        <span class="num">03</span>
         <h3>Built to Last</h3>
         <p>We are not chasing one contract. We are building a reputation federal customers can rely on, one task order at a time.</p>
       </div>
@@ -114,9 +115,8 @@
       <div>
         <div class="brandline">
           <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-            <circle cx="24" cy="24" r="22" stroke="#C9A84C" stroke-width="1"/>
-            <path d="M24 2 L27 17 L35 13 L31 21 L46 24 L31 27 L35 35 L27 31 L24 46 L21 31 L13 35 L17 27 L2 24 L17 21 L13 13 L21 17 Z" fill="#C9A84C"/>
-            <circle cx="24" cy="24" r="2.5" fill="#0C2340"/>
+            <circle class="ring" cx="24" cy="24" r="21" stroke-width="1" opacity="0.55" fill="none"/>
+            <path d="M24 8 C24.7 16.5 25.8 20.7 32 23.2 L40 24 L32 24.8 C25.8 27.3 24.7 31.5 24 40 C23.3 31.5 22.2 27.3 16 24.8 L8 24 L16 23.2 C22.2 20.7 23.3 16.5 24 8 Z"/>
           </svg>
           <span>Pioneer Federal Group</span>
         </div>
@@ -126,6 +126,7 @@
         <h4>Company</h4>
         <a href="about.html">About Us</a>
         <a href="services.html">Capabilities</a>
+        <a href="certifications.html">Certifications</a>
         <a href="contact.html">Contact</a>
       </div>
       <div>
