@@ -181,6 +181,7 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 .section{padding:96px 0}
 .section.alt{background:#fff}
 .section.tight{padding:64px 0}
+.section.roomy{padding:132px 0}
 .section-head{max-width:62ch;margin-bottom:50px}
 .section-head h2{font-size:clamp(27px,3.4vw,40px);margin-top:12px}
 .section-head p{color:var(--muted);margin-top:14px;font-size:17px}
@@ -231,8 +232,8 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 
 /* leadership */
 .people{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,.22)}
-.person{background:var(--navy);padding:38px 34px;position:relative;transition:transform .22s ease}
-.person:hover{transform:translateY(-4px)}
+.person{background:var(--navy);padding:38px 34px;position:relative;transition:transform .22s ease,box-shadow .22s ease}
+.person:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(0,0,0,.32),0 0 0 1px rgba(201,168,76,.3) inset;z-index:2}
 .person::before{content:"";position:absolute;top:0;left:0;width:52px;height:3px;background:var(--gold)}
 .person .role{font-family:"Archivo",sans-serif;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
 .person h3{font-size:25px;margin:10px 0 4px;color:#fff}
@@ -252,6 +253,42 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
   font-family:"Archivo",sans-serif;font-weight:600;letter-spacing:-.008em;
   font-size:clamp(19px,2.4vw,24px);line-height:1.55;color:var(--navy);
   border-left:3px solid var(--gold);padding-left:22px;
+}
+
+/* About — story section: lead paragraph, grouped detail cards, elevated closer */
+.story-lead{font-size:18px;line-height:1.75;color:var(--ink)}
+.story-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:var(--line);border:1px solid var(--line);margin-top:36px;
+}
+.story-card{
+  background:var(--paper);padding:32px 30px;position:relative;
+  transition:transform .22s ease,box-shadow .22s ease,background .18s;
+}
+.story-card:hover,.story-card:focus-within{
+  background:#fff;transform:translateY(-6px);z-index:2;
+  box-shadow:0 20px 44px rgba(12,35,64,.14),0 4px 12px rgba(12,35,64,.07);
+}
+.story-card .num{font-family:"Archivo",sans-serif;font-weight:800;font-size:12px;color:var(--gold);letter-spacing:.08em}
+.story-card p{margin-top:10px;font-size:15px;color:var(--muted);line-height:1.68}
+.story-close{
+  margin-top:44px;font-family:"Archivo",sans-serif;font-weight:600;letter-spacing:-.006em;
+  font-size:clamp(18px,2.1vw,21px);line-height:1.55;color:var(--navy);
+  border-left:3px solid var(--gold);padding-left:22px;
+  transition:transform .22s ease;
+}
+.story-close:hover{transform:translateY(-3px)}
+
+/* About — Standard section quote, elevated into a hoverable card */
+.standard-card{
+  background:#fff;border:1px solid var(--line);border-radius:8px;
+  padding:38px 40px;transition:transform .22s ease,box-shadow .22s ease;
+}
+.standard-card:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(12,35,64,.13)}
+.standard-card .pull-quote{margin-top:0}
+@media (max-width:640px){
+  .story-grid{grid-template-columns:1fr}
+  .standard-card{padding:30px 26px}
 }
 
 /* naics reference table (Capability Statement — dense scan list, distinct
