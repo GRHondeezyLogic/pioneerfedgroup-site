@@ -7,7 +7,7 @@
 <meta name="description" content="Pioneer Federal Group is a service-disabled veteran-owned government contracting company based in Georgia, delivering facilities, logistics, construction, and general services to federal agencies.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,43 +16,38 @@
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="Pioneer Federal Group home">
       <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <circle cx="24" cy="24" r="22" stroke="#C9A84C" stroke-width="1"/>
-        <path d="M24 2 L27 17 L35 13 L31 21 L46 24 L31 27 L35 35 L27 31 L24 46 L21 31 L13 35 L17 27 L2 24 L17 21 L13 13 L21 17 Z" fill="#C9A84C"/>
-        <circle cx="24" cy="24" r="2.5" fill="#0C2340"/>
+        <circle class="ring" cx="24" cy="24" r="21" stroke-width="1" opacity="0.55" fill="none"/>
+        <path d="M24 8 C24.7 16.5 25.8 20.7 32 23.2 L40 24 L32 24.8 C25.8 27.3 24.7 31.5 24 40 C23.3 31.5 22.2 27.3 16 24.8 L8 24 L16 23.2 C22.2 20.7 23.3 16.5 24 8 Z"/>
       </svg>
-      <span class="name">Pioneer Federal Group<small>LLC · SDVOSB · Est. 2026</small></span>
+      <span class="name">Pioneer Federal Group<small>SDVOSB · Georgia</small></span>
     </a>
     <button class="nav-toggle" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
     <div class="nav-links">
       <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
       <a href="services.html">Capabilities</a>
-      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html" class="nav-cta">Contact Us</a>
     </div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <div>
-      <span class="eyebrow">Service-Disabled Veteran-Owned Small Business · Georgia</span>
-      <h1>Dependable Under Pressure. Accountable on Every Mission.</h1>
-      <p>Pioneer Federal Group is a veteran-led federal contractor built on Marine Corps discipline. We deliver construction, facilities, transportation, and operational support — and we own the outcome from award to completion.</p>
-      <div class="hero-cta">
-        <a class="btn solid" href="services.html">View Capabilities</a>
-        <a class="btn ghost" href="contact.html">Contact Us</a>
-      </div>
+    <span class="kicker"><span class="dot"></span>Service-Disabled Veteran-Owned Small Business · Georgia</span>
+    <h1>Not driven by excuses — <span class="accent">driven by execution.</span></h1>
+    <p>Pioneer Federal Group is a veteran-led federal contractor built on Marine Corps discipline. We deliver construction, facilities, transportation, and operational support — and we own the outcome from award to completion.</p>
+    <div class="hero-cta">
+      <a class="btn solid" href="services.html">View Capabilities</a>
+      <a class="btn ghost" href="contact.html">Contact Us</a>
     </div>
-    <svg class="compass" viewBox="0 0 300 300" fill="none" aria-hidden="true">
-      <circle cx="150" cy="150" r="138" fill="rgba(255,255,255,0.05)"/>
-      <circle cx="150" cy="150" r="132" stroke="#C9A84C" stroke-width="1" fill="none" opacity="0.5"/>
-      <path d="M150 67 L153.1 87.6 L163.4 81.6 L157.4 91.9 L178 95 L157.4 98.1 L163.4 108.4 L153.1 102.4 L150 123 L146.9 102.4 L136.6 108.4 L142.6 98.1 L122 95 L142.6 91.9 L136.6 81.6 L146.9 87.6 Z" fill="#C9A84C" opacity="0.9"/>
-      <text x="150" y="205" text-anchor="middle" font-family="'Public Sans', sans-serif" font-weight="700" font-size="65" fill="#C9A84C" letter-spacing="6">PFG</text>
-      <line x1="105" y1="220" x2="195" y2="220" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
-      <text x="150" y="240" text-anchor="middle" font-family="'Public Sans', sans-serif" font-weight="600" font-size="12" fill="#C9A84C" letter-spacing="3.5" opacity="0.7">SDVOSB</text>
-    </svg>
+    <div class="stat-strip">
+      <div class="stat"><b>51%</b><span>Veteran Owned</span></div>
+      <div class="stat"><b>100%</b><span>Service-Disabled</span></div>
+      <div class="stat"><b>6</b><span>NAICS Codes</span></div>
+      <div class="stat"><b>GA</b><span>Headquartered</span></div>
+    </div>
   </div>
-  <div class="meridian"></div>
 </header>
 
 <div class="trust-bar">
@@ -70,7 +65,7 @@
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow dark">Capabilities</span>
+      <span class="eyebrow dark"><span class="dot"></span>Capabilities</span>
       <h2>Broad scope. Single point of accountability.</h2>
       <p>From facilities upkeep to specialized transport, we manage vetted crews and execution under one responsible contractor — so contracting officers deal with one team, not ten.</p>
     </div>
@@ -112,8 +107,8 @@
 <section class="section alt">
   <div class="wrap split">
     <div>
-      <span class="eyebrow dark">Why Pioneer</span>
-      <h2 style="margin-top:10px;font-size:clamp(26px,3.4vw,38px)">Built to Solve Problems. Committed to Results.</h2>
+      <span class="eyebrow dark"><span class="dot"></span>Why Pioneer</span>
+      <h2 style="margin-top:10px;font-size:clamp(26px,3.4vw,38px)">Built to solve problems. Committed to results.</h2>
       <p style="color:var(--muted);margin-top:14px">Pioneer Federal Group was founded on a simple principle: when a mission needs to get done, ownership matters. As a veteran-led company, we bring a hands-on approach and direct accountability to every contract. We do not pass responsibility. We take it.</p>
       <ul class="list">
         <li><svg class="tick" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#C9A84C" stroke-width="1.5"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="#0C2340" stroke-width="1.8" stroke-linecap="round"/></svg><span><b>Owner-Led Accountability.</b> Our leadership remains directly involved in every project, ensuring decisions are made quickly, challenges are addressed proactively, and commitments are honored from start to finish.</span></li>
@@ -121,29 +116,24 @@
         <li><svg class="tick" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#C9A84C" stroke-width="1.5"/><path d="M6 10.5l2.5 2.5L14 7.5" stroke="#0C2340" stroke-width="1.8" stroke-linecap="round"/></svg><span><b>Mission-Focused Performance.</b> We approach every requirement with urgency and a focus on practical results. Our job is not just to perform but to solve problems and support the mission until it is complete.</span></li>
       </ul>
     </div>
-    <svg class="compass-line" viewBox="0 0 300 300" fill="none" aria-hidden="true">
-      <circle cx="150" cy="150" r="138" fill="#0C2340"/>
-      <circle cx="150" cy="150" r="132" stroke="#C9A84C" stroke-width="1" fill="none" opacity="0.7"/>
-      <path d="M150 67 L153.1 87.6 L163.4 81.6 L157.4 91.9 L178 95 L157.4 98.1 L163.4 108.4 L153.1 102.4 L150 123 L146.9 102.4 L136.6 108.4 L142.6 98.1 L122 95 L142.6 91.9 L136.6 81.6 L146.9 87.6 Z" fill="#C9A84C"/>
-      <text x="150" y="205" text-anchor="middle" font-family="'Public Sans', sans-serif" font-weight="700" font-size="65" fill="#C9A84C" letter-spacing="6">PFG</text>
-      <line x1="105" y1="220" x2="195" y2="220" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
-      <text x="150" y="240" text-anchor="middle" font-family="'Public Sans', sans-serif" font-weight="600" font-size="12" fill="#C9A84C" letter-spacing="3.5" opacity="0.8">SDVOSB</text>
-    </svg>
+    <div class="mark-panel">
+      <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <circle class="ring" cx="24" cy="24" r="21" stroke-width="1" fill="none"/>
+        <path d="M24 8 C24.7 16.5 25.8 20.7 32 23.2 L40 24 L32 24.8 C25.8 27.3 24.7 31.5 24 40 C23.3 31.5 22.2 27.3 16 24.8 L8 24 L16 23.2 C22.2 20.7 23.3 16.5 24 8 Z"/>
+      </svg>
+      <span class="tag">Pioneer Federal Group</span>
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="data-block">
-      <h3>Company Data</h3>
-      <dl class="data-grid">
-        <div><dt>Legal Name</dt><dd>Pioneer Fed Group LLC</dd></div>
-        <div><dt>DBA</dt><dd>Pioneer Federal Group</dd></div>
-        <div><dt>State of Formation</dt><dd>Georgia</dd></div>
-        <div><dt>Business Type</dt><dd>Service-Disabled Veteran-Owned Small Business (certification in progress)</dd></div>
-        <div><dt>UEI</dt><dd>Pending — SAM.gov registration in progress</dd></div>
-        <div><dt>CAGE Code</dt><dd>Pending</dd></div>
-      </dl>
+    <div class="sam-panel">
+      <div>
+        <h3>Certified to compete. Ready to perform.</h3>
+        <p>SDVOSB, VOSB, and Small Business set-aside eligibility, plus full SAM.gov and CAGE code status — see our complete certification profile.</p>
+      </div>
+      <a class="btn solid" href="certifications.html">View Certifications</a>
     </div>
   </div>
 </section>
@@ -166,9 +156,8 @@
       <div>
         <div class="brandline">
           <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-            <circle cx="24" cy="24" r="22" stroke="#C9A84C" stroke-width="1"/>
-            <path d="M24 2 L27 17 L35 13 L31 21 L46 24 L31 27 L35 35 L27 31 L24 46 L21 31 L13 35 L17 27 L2 24 L17 21 L13 13 L21 17 Z" fill="#C9A84C"/>
-            <circle cx="24" cy="24" r="2.5" fill="#0C2340"/>
+            <circle class="ring" cx="24" cy="24" r="21" stroke-width="1" opacity="0.55" fill="none"/>
+            <path d="M24 8 C24.7 16.5 25.8 20.7 32 23.2 L40 24 L32 24.8 C25.8 27.3 24.7 31.5 24 40 C23.3 31.5 22.2 27.3 16 24.8 L8 24 L16 23.2 C22.2 20.7 23.3 16.5 24 8 Z"/>
           </svg>
           <span>Pioneer Federal Group</span>
         </div>
@@ -178,6 +167,7 @@
         <h4>Company</h4>
         <a href="about.html">About Us</a>
         <a href="services.html">Capabilities</a>
+        <a href="certifications.html">Certifications</a>
         <a href="contact.html">Contact</a>
       </div>
       <div>
