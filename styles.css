@@ -106,12 +106,36 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 }
 .rotator{display:inline-grid;text-align:left;color:var(--gold);vertical-align:top}
 .rotator > span{
-  grid-area:1/1;white-space:nowrap;opacity:0;transform:translateY(9px);
-  transition:opacity .45s ease,transform .45s ease;
+  grid-area:1/1;position:relative;white-space:pre;opacity:0;
+  transition:opacity .3s ease;padding-bottom:5px;
 }
-.rotator > span.on{opacity:1;transform:none}
+.rotator > span.on{opacity:1}
+.rotator .ch{
+  display:inline-block;font-style:normal;opacity:0;transform:translateY(.55em);
+  transition:opacity .32s ease,transform .32s ease;
+}
+.rotator > span.on .ch{opacity:1;transform:none}
+.rotator > span::after{
+  content:"";position:absolute;left:0;bottom:0;height:2.5px;width:100%;
+  background:var(--gold);border-radius:2px;transform:scaleX(0);
+  transform-origin:left;transition:transform .4s ease;
+}
+.rotator > span.on::after{transform:scaleX(1);transition-delay:.45s}
 @media (prefers-reduced-motion:reduce){
   .rotator > span{transition:none;transform:none}
+  .rotator > span::after{transition:none;transform:scaleX(1)}
+}
+
+/* tagline underline sweep on scroll-in */
+.quote .accent{position:relative;padding-bottom:4px}
+.quote .accent::after{
+  content:"";position:absolute;left:0;bottom:-4px;height:4px;width:100%;
+  background:var(--gold);border-radius:2px;transform:scaleX(0);
+  transform-origin:left;transition:transform .8s ease .35s;
+}
+.quote-band.in .quote .accent::after{transform:scaleX(1)}
+@media (prefers-reduced-motion:reduce){
+  .quote .accent::after{transition:none;transform:scaleX(1)}
 }
 
 /* small page hero (interior pages) */
