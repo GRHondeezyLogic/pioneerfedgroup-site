@@ -38,6 +38,22 @@
       }
     }
 
+    // Reject obviously fake/profane email domains (e.g. troll addresses).
+    // This only stops casual abuse through the visible form; it cannot
+    // catch someone posting directly to the API.
+    var emailField = document.getElementById('f-email');
+    if (emailField && emailField.value.indexOf('@') !== -1) {
+      var domain = emailField.value.split('@')[1].toLowerCase();
+      var blocked = ['fuck', 'shit', 'bitch', 'cunt', 'dick', 'cock', 'pussy', 'whore', 'slut', 'asshole', 'nigger', 'faggot', 'retard', 'rape'];
+      for (var bi = 0; bi < blocked.length; bi++) {
+        if (domain.indexOf(blocked[bi]) !== -1) {
+          showError('Please enter a valid email address.');
+          emailField.focus();
+          return;
+        }
+      }
+    }
+
     var hcaptchaField = form.querySelector('[name="h-captcha-response"]');
     if (hcaptchaField && !hcaptchaField.value) {
       showError('Please complete the verification challenge before sending.');
@@ -72,7 +88,8 @@
           throw new Error(json.message || 'Send failed.');
         }
       })
-      .catch(function () {
+      .catch(function (err) {
+        console.error('Contact form submission failed:', err);
         showError('Something went wrong. Please email us directly at info@pioneerfedgroup.com.');
       })
       .finally(function () {
