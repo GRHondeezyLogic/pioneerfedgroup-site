@@ -212,6 +212,16 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 .card h3{font-size:19.5px;margin:16px 0 10px;letter-spacing:-.01em}
 .card p{font-size:14.5px;color:var(--muted);line-height:1.62}
 
+/* Capabilities page — high-level service framework. Distinct from the six
+   detailed cards below it and from the Capability Statement's dense NAICS
+   table, so it summarizes scope without duplicating procurement detail. */
+.framework-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.framework-item{background:#fff;padding:32px 30px;position:relative;transition:transform .22s ease,box-shadow .22s ease}
+.framework-item:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(12,35,64,.13);z-index:2}
+.framework-num{font-family:"Archivo",sans-serif;font-weight:800;font-size:12px;color:var(--gold);letter-spacing:.08em}
+.framework-item h3{font-size:18px;margin:12px 0 8px;letter-spacing:-.01em}
+.framework-item p{font-size:14.5px;color:var(--muted);line-height:1.62}
+
 /* two-column feature */
 .split{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
 .list{margin-top:20px;display:grid;gap:18px}
@@ -448,7 +458,7 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 @media (max-width:880px){
   .hero .wrap{padding:56px 24px 64px}
   .stat-strip{gap:34px;margin-top:52px}
-  .grid,.values,.people,.cert-grid{grid-template-columns:1fr 1fr}
+  .grid,.values,.people,.cert-grid,.framework-grid{grid-template-columns:1fr 1fr}
   .contact-grid,.cta-strip-inner{grid-template-columns:1fr}
   .cta-strip-inner{flex-direction:column;align-items:flex-start}
   .footer .top{grid-template-columns:1fr;gap:30px}
@@ -463,7 +473,7 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
   .nav-toggle{display:block}
 }
 @media (max-width:560px){
-  .grid,.values,.data-grid,.people,.cert-grid{grid-template-columns:1fr}
+  .grid,.values,.data-grid,.people,.cert-grid,.framework-grid{grid-template-columns:1fr}
   .stat-strip{gap:28px 40px}
 }
 @media (prefers-reduced-motion:reduce){
