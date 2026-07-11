@@ -90,13 +90,29 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 }
 .chip:hover{background:rgba(201,168,76,.12);border-color:var(--gold);color:#fff}
 
-/* tagline band */
-.quote-band{background:var(--navy);border-top:3px solid var(--gold);padding:72px 0}
+/* tagline band — quiet editorial treatment on the light background */
+.quote-band{background:var(--paper);padding:84px 0;text-align:center}
+.quote-band .rule{width:54px;height:3px;background:var(--gold);margin:0 auto 30px}
 .quote-band .quote{
-  font-family:"Archivo",sans-serif;font-weight:800;letter-spacing:-.015em;color:#fff;
-  font-size:clamp(26px,4vw,44px);line-height:1.15;text-align:center;max-width:22ch;margin:0 auto;
+  font-family:"Archivo",sans-serif;font-weight:800;letter-spacing:-.015em;color:var(--navy);
+  font-size:clamp(24px,3.4vw,38px);line-height:1.18;max-width:24ch;margin:0 auto;
 }
 .quote-band .accent{color:var(--gold)}
+
+/* rotating highlight word (hero addition) */
+.rotate-line{
+  margin-top:24px;font-family:"Archivo",sans-serif;font-weight:700;
+  font-size:clamp(16px,1.8vw,20px);letter-spacing:.01em;color:rgba(255,255,255,.85);
+}
+.rotator{display:inline-grid;text-align:left;color:var(--gold);vertical-align:top}
+.rotator > span{
+  grid-area:1/1;white-space:nowrap;opacity:0;transform:translateY(9px);
+  transition:opacity .45s ease,transform .45s ease;
+}
+.rotator > span.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .rotator > span{transition:none;transform:none}
+}
 
 /* small page hero (interior pages) */
 .page-hero{
