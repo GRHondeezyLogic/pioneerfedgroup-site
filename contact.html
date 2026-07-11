@@ -51,27 +51,69 @@
         <input type="hidden" name="access_key" value="2fbfb614-8fbd-42cf-84bb-05c754e65958">
         <input type="hidden" name="subject" value="New message from pioneerfedgroup.com">
         <input type="hidden" name="from_name" value="Pioneer Federal Group Website">
+        <input type="hidden" name="loaded_at" id="f-loaded-at" value="">
         <input type="checkbox" name="botcheck" class="form-honeypot" tabindex="-1" autocomplete="off">
+
+        <div class="form-row form-row-name">
+          <div class="form-field">
+            <label for="f-first">First Name</label>
+            <input type="text" id="f-first" name="first_name" autocomplete="given-name" required>
+          </div>
+          <div class="form-field form-field-mi">
+            <label for="f-mi">M.I.</label>
+            <input type="text" id="f-mi" name="middle_initial" maxlength="1" autocomplete="additional-name">
+          </div>
+          <div class="form-field">
+            <label for="f-last">Last Name</label>
+            <input type="text" id="f-last" name="last_name" autocomplete="family-name" required>
+          </div>
+        </div>
 
         <div class="form-row">
           <div class="form-field">
-            <label for="f-name">Name</label>
-            <input type="text" id="f-name" name="name" required>
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" autocomplete="email" required>
           </div>
           <div class="form-field">
-            <label for="f-email">Email</label>
-            <input type="email" id="f-email" name="email" required>
+            <label for="f-phone">Phone (Optional)</label>
+            <input type="tel" id="f-phone" name="phone" autocomplete="tel" placeholder="(555) 555-5555">
           </div>
         </div>
-        <div class="form-field">
-          <label for="f-phone">Phone (Optional)</label>
-          <input type="tel" id="f-phone" name="phone">
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="f-business">Business Name (Optional)</label>
+            <input type="text" id="f-business" name="business_name" autocomplete="organization">
+          </div>
+          <div class="form-field">
+            <label for="f-service">What Can We Help With</label>
+            <select id="f-service" name="service_interest" required>
+              <option value="" disabled selected>Select one</option>
+              <option value="Facilities Support">Facilities Support</option>
+              <option value="Construction &amp; Repair">Construction &amp; Repair</option>
+              <option value="Freight &amp; Hazmat Transport">Freight &amp; Hazmat Transport</option>
+              <option value="Grounds &amp; Landscaping">Grounds &amp; Landscaping</option>
+              <option value="Moving &amp; Relocation">Moving &amp; Relocation</option>
+              <option value="General Support Services">General Support Services</option>
+              <option value="Capability Statement Request">Capability Statement Request</option>
+              <option value="Teaming / Subcontracting">Teaming / Subcontracting</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
         </div>
+
+        <div class="form-field">
+          <label for="f-address">Business Address (Optional)</label>
+          <input type="text" id="f-address" name="business_address" autocomplete="street-address">
+        </div>
+
         <div class="form-field">
           <label for="f-message">Message</label>
           <textarea id="f-message" name="message" required></textarea>
         </div>
+
         <button type="submit" class="btn solid form-submit">Send Message</button>
+        <p class="form-privacy-note">Submitting sends your information directly to Pioneer Federal Group by email. It is not stored on this website or shared with any other party.</p>
         <div id="form-status" class="form-status" role="status"></div>
       </form>
     </div>
