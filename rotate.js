@@ -25,3 +25,17 @@ document.querySelectorAll('.rotator').forEach(function (el) {
     spans[i].classList.add('on');
   }, 2600);
 });
+
+// Scroll reveal — cards and panels rise in as they enter the viewport.
+(function () {
+  var els = document.querySelectorAll('.card, .value, .cert-card, .person, .mark-panel, .sam-panel, .data-block, .contact-card');
+  if (!('IntersectionObserver' in window) ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  els.forEach(function (el) { el.classList.add('reveal'); });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(function (el) { io.observe(el); });
+})();
