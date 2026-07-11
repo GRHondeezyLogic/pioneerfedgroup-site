@@ -253,6 +253,12 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 .person h3{font-size:25px;margin:10px 0 4px;color:#fff}
 .person .sub{font-size:13px;color:rgba(255,255,255,.5);letter-spacing:.04em;margin-bottom:15px;font-weight:600}
 .person p{font-size:15px;color:rgba(255,255,255,.75)}
+.person-link{
+  display:inline-flex;align-items:center;gap:6px;margin-top:14px;
+  font-family:"Archivo",sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.03em;
+  color:var(--gold-soft);text-decoration:none;
+}
+.person-link:hover{color:var(--gold);text-decoration:underline}
 
 /* values strip */
 .values{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
@@ -444,6 +450,15 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 .footer .brandline .mark{width:30px;height:33px}
 .footer .brandline span{font-family:"Archivo",sans-serif;font-weight:700;color:#fff;font-size:16px}
 .footer p{font-size:14px;max-width:40ch}
+.footer-social{display:flex;gap:10px;margin-top:18px}
+.footer-social a{
+  width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.25);
+  display:flex;align-items:center;justify-content:center;padding:0;
+  transition:border-color .2s ease,background .2s ease;
+}
+.footer-social a:hover{border-color:var(--gold);background:rgba(201,168,76,.12)}
+.footer-social svg{width:16px;height:16px;fill:rgba(255,255,255,.75);transition:fill .2s ease}
+.footer-social a:hover svg{fill:var(--gold)}
 .footer .legal{border-top:1px solid rgba(255,255,255,.12);padding:22px 0;font-size:12.5px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .footer .legal .gold{color:var(--gold);font-family:"Archivo",sans-serif;font-weight:700;letter-spacing:.04em}
 
