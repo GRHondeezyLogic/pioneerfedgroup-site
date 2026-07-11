@@ -63,7 +63,7 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
   background-size:auto, 26px 26px;
 }
 .hero .wrap{position:relative;padding:104px 24px 96px}
-.hero .kicker{display:inline-flex;align-items:center;gap:9px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.4);padding:8px 16px;font-family:"Archivo";font-size:11.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-soft)}
+.hero .kicker{display:inline-flex;align-items:center;gap:9px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.4);padding:8px 16px;font-family:"Archivo",sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-soft)}
 .hero .kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
 .hero h1{color:#fff;font-size:clamp(36px,5.6vw,68px);line-height:1.03;margin:26px 0 24px;max-width:18ch}
 .hero h1 .accent{color:var(--gold)}
@@ -81,9 +81,22 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 .btn.navy{border-color:var(--navy);background:var(--navy);color:#fff}
 .btn.navy:hover{background:var(--navy-2);border-color:var(--navy-2)}
 
-.stat-strip{display:flex;gap:52px;flex-wrap:wrap;margin-top:76px;padding-top:32px;border-top:1px solid rgba(255,255,255,.14)}
-.stat-strip .stat b{display:block;font-family:"Archivo";font-weight:800;font-size:29px;color:var(--gold);letter-spacing:-.01em}
-.stat-strip .stat span{font-size:12px;color:rgba(255,255,255,.55);letter-spacing:.07em;text-transform:uppercase;font-weight:600}
+.hero-chips{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:72px;padding-top:30px;border-top:1px solid rgba(255,255,255,.14)}
+.chips-label{font-family:"Archivo",sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-right:8px}
+.chip{
+  font-family:"Archivo",sans-serif;font-size:13px;font-weight:600;letter-spacing:.03em;
+  color:var(--gold-soft);border:1px solid rgba(201,168,76,.4);padding:9px 16px;
+  transition:background .18s,border-color .18s,color .18s;
+}
+.chip:hover{background:rgba(201,168,76,.12);border-color:var(--gold);color:#fff}
+
+/* tagline band */
+.quote-band{background:var(--navy);border-top:3px solid var(--gold);padding:72px 0}
+.quote-band .quote{
+  font-family:"Archivo",sans-serif;font-weight:800;letter-spacing:-.015em;color:#fff;
+  font-size:clamp(26px,4vw,44px);line-height:1.15;text-align:center;max-width:22ch;margin:0 auto;
+}
+.quote-band .accent{color:var(--gold)}
 
 /* small page hero (interior pages) */
 .page-hero{
@@ -127,7 +140,7 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 .list{margin-top:20px;display:grid;gap:18px}
 .list li{list-style:none;display:flex;gap:16px;align-items:flex-start;font-size:15.5px}
 .list .tick{flex:none;width:22px;height:22px;margin-top:2px}
-.list b{font-family:"Archivo";font-weight:700;color:var(--navy);letter-spacing:-.005em}
+.list b{font-family:"Archivo",sans-serif;font-weight:700;color:var(--navy);letter-spacing:-.005em}
 
 /* side panel with big mark (replaces old giant illustrated compass) */
 .mark-panel{
@@ -138,13 +151,13 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 }
 .mark-panel::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 45%, rgba(201,168,76,.14), transparent 65%)}
 .mark-panel .mark{width:42%;position:relative;z-index:1}
-.mark-panel .tag{position:absolute;bottom:28px;left:0;right:0;text-align:center;font-family:"Archivo";font-size:11px;font-weight:700;letter-spacing:.32em;color:rgba(201,168,76,.75);text-transform:uppercase}
+.mark-panel .tag{position:absolute;bottom:28px;left:0;right:0;text-align:center;font-family:"Archivo",sans-serif;font-size:11px;font-weight:700;letter-spacing:.32em;color:rgba(201,168,76,.75);text-transform:uppercase}
 
 /* leadership */
 .people{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,.22)}
 .person{background:var(--navy);padding:38px 34px;position:relative}
 .person::before{content:"";position:absolute;top:0;left:0;width:52px;height:3px;background:var(--gold)}
-.person .role{font-family:"Archivo";font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.person .role{font-family:"Archivo",sans-serif;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
 .person h3{font-size:25px;margin:10px 0 4px;color:#fff}
 .person .sub{font-size:13px;color:rgba(255,255,255,.5);letter-spacing:.04em;margin-bottom:15px;font-weight:600}
 .person p{font-size:15px;color:rgba(255,255,255,.75)}
@@ -152,7 +165,7 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 /* values strip */
 .values{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
 .value{background:#fff;padding:32px 28px}
-.value .num{font-family:"Archivo";font-weight:800;font-size:13px;color:var(--gold);letter-spacing:.05em}
+.value .num{font-family:"Archivo",sans-serif;font-weight:800;font-size:13px;color:var(--gold);letter-spacing:.05em}
 .value h3{font-size:18px;margin:12px 0 8px;letter-spacing:-.01em}
 .value p{font-size:14.5px;color:var(--muted)}
 
@@ -170,12 +183,12 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 .cert-card .badge{width:56px;height:56px;margin:0 auto 20px;border:1.5px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center}
 .cert-card .badge svg{width:26px;height:26px}
 .cert-card h3{font-size:17px;letter-spacing:.02em}
-.cert-card .status{display:inline-block;margin-top:10px;font-family:"Archivo";font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;background:rgba(201,168,76,.14);color:#8a7233}
+.cert-card .status{display:inline-block;margin-top:10px;font-family:"Archivo",sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;background:rgba(201,168,76,.14);color:#8a7233}
 .cert-card p{margin-top:12px;font-size:14px;color:var(--muted)}
 .sam-panel{background:var(--navy);color:#fff;padding:44px 40px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;border-top:3px solid var(--gold)}
 .sam-panel h3{color:#fff;font-size:22px;margin-bottom:8px}
 .sam-panel p{color:rgba(255,255,255,.72);max-width:52ch;font-size:15.5px}
-.sam-panel .status-pill{flex:none;display:inline-flex;align-items:center;gap:9px;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.4);padding:12px 20px;font-family:"Archivo";font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-soft)}
+.sam-panel .status-pill{flex:none;display:inline-flex;align-items:center;gap:9px;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.4);padding:12px 20px;font-family:"Archivo",sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-soft)}
 .status-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
 
 /* contact */
@@ -200,7 +213,7 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 .footer .brandline span{font-family:"Archivo",sans-serif;font-weight:700;color:#fff;font-size:16px}
 .footer p{font-size:14px;max-width:40ch}
 .footer .legal{border-top:1px solid rgba(255,255,255,.12);padding:22px 0;font-size:12.5px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.footer .legal .gold{color:var(--gold);font-family:"Archivo";font-weight:700;letter-spacing:.04em}
+.footer .legal .gold{color:var(--gold);font-family:"Archivo",sans-serif;font-weight:700;letter-spacing:.04em}
 
 /* cta strip */
 .cta-strip{background:var(--navy-2);padding:76px 0;border-top:3px solid var(--gold)}
