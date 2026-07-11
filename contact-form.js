@@ -29,7 +29,7 @@
       .then(function (json) {
         if (json.success) {
           form.reset();
-          status.textContent = 'Message sent. We will get back to you within one business day.';
+          status.textContent = 'Message sent. We will get back to you within 24 to 72 hours.';
           status.className = 'form-status show success';
         } else {
           throw new Error(json.message || 'Send failed.');
