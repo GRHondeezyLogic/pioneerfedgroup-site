@@ -304,8 +304,14 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 /* naics reference table (Capability Statement — dense scan list, distinct
    from the Capabilities page's descriptive card grid) */
 .naics-table{background:#fff;border:1px solid var(--line)}
-.naics-row{display:flex;gap:18px;align-items:baseline;padding:15px 22px;border-top:1px solid var(--line)}
-.naics-row:first-child{border-top:0}
+.naics-head{
+  display:flex;gap:18px;padding:12px 22px;background:var(--paper);
+  font-family:"Archivo",sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted);
+}
+.naics-head span:first-child{flex:none;width:70px}
+.naics-row{display:flex;gap:18px;align-items:baseline;padding:15px 22px;border-top:1px solid var(--line);transition:background .18s}
+.naics-row:hover{background:var(--paper)}
 .naics-row .code{
   font-family:"Archivo",sans-serif;font-weight:700;font-size:13px;letter-spacing:.04em;
   color:var(--navy);flex:none;width:70px;
@@ -313,30 +319,48 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 .naics-row .title{font-size:15px;color:var(--ink)}
 @media (max-width:560px){
   .naics-row{flex-direction:column;gap:3px}
+  .naics-head span:not(:first-child){display:none}
 }
 
-/* company data block */
+/* company data block — official label/value reference rows */
 .data-block{background:var(--navy);color:#fff;padding:42px 38px;border-top:3px solid var(--gold);border-radius:0 0 8px 8px}
-.data-block h3{color:var(--gold);font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-family:"Archivo",sans-serif;font-weight:700;margin-bottom:24px}
-.data-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 36px}
-.data-grid div{font-size:15px}
-.data-grid dt{color:rgba(255,255,255,.55);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:4px;font-weight:600}
-.data-grid dd{margin:0;font-weight:500}
+.data-block h3{color:var(--gold);font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-family:"Archivo",sans-serif;font-weight:700;margin-bottom:6px}
+.data-rows{display:flex;flex-direction:column}
+.data-row{
+  display:flex;justify-content:space-between;align-items:baseline;gap:28px;
+  padding:16px 0;border-top:1px solid rgba(255,255,255,.14);
+}
+.data-row:first-child{border-top:0}
+.data-row dt{
+  color:rgba(255,255,255,.55);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
+  font-weight:600;flex:none;
+}
+.data-row dd{margin:0;font-weight:600;font-size:15px;color:#fff;text-align:right}
+@media (max-width:640px){
+  .data-row{flex-direction:column;align-items:flex-start;gap:5px}
+  .data-row dd{text-align:left}
+}
 
-/* certifications */
+/* certifications — unified status-chip shared by cert cards and the SAM panel */
 .cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:1px}
-.cert-card{background:#fff;padding:38px 30px;text-align:center;border-radius:6px;transition:transform .22s ease,box-shadow .22s ease}
+.cert-card{background:#fff;padding:38px 30px;text-align:center;border-radius:6px 6px 0 0;border-top:3px solid var(--gold);transition:transform .22s ease,box-shadow .22s ease}
 .cert-card:hover{transform:translateY(-6px) scale(1.015);box-shadow:0 20px 44px rgba(12,35,64,.16);z-index:2;position:relative}
 .cert-card .badge{width:56px;height:56px;margin:0 auto 20px;border:1.5px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center}
 .cert-card .badge svg{width:26px;height:26px}
 .cert-card h3{font-size:17px;letter-spacing:.02em}
-.cert-card .status{display:inline-block;margin-top:10px;font-family:"Archivo",sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;background:rgba(201,168,76,.14);color:#8a7233}
 .cert-card p{margin-top:12px;font-size:14px;color:var(--muted)}
+.status-chip{
+  display:inline-flex;align-items:center;gap:8px;margin-top:10px;
+  font-family:"Archivo",sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:6px 14px;border-radius:20px;
+}
+.status-chip .dot{width:6px;height:6px;border-radius:50%;flex:none;background:currentColor}
+.status-chip.on-light{background:rgba(201,168,76,.14);color:#8a7233}
+.status-chip.on-dark{background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.4);color:var(--gold-soft)}
 .sam-panel{background:var(--navy);color:#fff;padding:44px 40px;border-radius:8px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;border-top:3px solid var(--gold)}
 .sam-panel h3{color:#fff;font-size:22px;margin-bottom:8px}
 .sam-panel p{color:rgba(255,255,255,.72);max-width:52ch;font-size:15.5px}
-.sam-panel .status-pill{flex:none;display:inline-flex;align-items:center;gap:9px;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.4);padding:12px 20px;font-family:"Archivo",sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-soft)}
-.status-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.sam-panel .status-chip{margin-top:0;flex:none;padding:12px 20px}
 
 /* contact */
 .contact-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:start}
