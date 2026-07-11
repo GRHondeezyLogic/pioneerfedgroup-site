@@ -221,6 +221,27 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 .value h3{font-size:18px;margin:12px 0 8px;letter-spacing:-.01em}
 .value p{font-size:14.5px;color:var(--muted)}
 
+/* pull quote (About — closing statement) */
+.pull-quote{
+  font-family:"Archivo",sans-serif;font-weight:600;letter-spacing:-.008em;
+  font-size:clamp(19px,2.4vw,24px);line-height:1.55;color:var(--navy);
+  border-left:3px solid var(--gold);padding-left:22px;
+}
+
+/* naics reference table (Capability Statement — dense scan list, distinct
+   from the Capabilities page's descriptive card grid) */
+.naics-table{background:#fff;border:1px solid var(--line)}
+.naics-row{display:flex;gap:18px;align-items:baseline;padding:15px 22px;border-top:1px solid var(--line)}
+.naics-row:first-child{border-top:0}
+.naics-row .code{
+  font-family:"Archivo",sans-serif;font-weight:700;font-size:13px;letter-spacing:.04em;
+  color:var(--navy);flex:none;width:70px;
+}
+.naics-row .title{font-size:15px;color:var(--ink)}
+@media (max-width:560px){
+  .naics-row{flex-direction:column;gap:3px}
+}
+
 /* company data block */
 .data-block{background:var(--navy);color:#fff;padding:42px 38px;border-top:3px solid var(--gold);border-radius:0 0 8px 8px}
 .data-block h3{color:var(--gold);font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-family:"Archivo",sans-serif;font-weight:700;margin-bottom:24px}
