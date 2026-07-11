@@ -54,12 +54,6 @@
       }
     }
 
-    var hcaptchaField = form.querySelector('[name="h-captcha-response"]');
-    if (hcaptchaField && !hcaptchaField.value) {
-      showError('Please complete the verification challenge before sending.');
-      return;
-    }
-
     var key = form.querySelector('[name="access_key"]').value;
     if (!key || key === 'YOUR_WEB3FORMS_ACCESS_KEY') {
       showError('This form is not fully set up yet. Please email us directly at info@pioneerfedgroup.com.');
@@ -81,7 +75,6 @@
         if (json.success) {
           form.reset();
           if (loadedAtField) loadedAtField.value = String(Date.now());
-          if (window.hcaptcha) window.hcaptcha.reset();
           status.textContent = 'Message sent. We will get back to you within 24 to 72 hours.';
           status.className = 'form-status show success';
         } else {

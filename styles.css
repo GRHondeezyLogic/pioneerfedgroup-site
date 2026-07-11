@@ -378,7 +378,6 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 .form-field input:focus,.form-field textarea:focus,.form-field select:focus{outline:2px solid var(--gold);outline-offset:1px;background:#fff}
 .form-field textarea{resize:vertical;min-height:130px;font-family:inherit}
 .form-honeypot{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
-.h-captcha{margin-bottom:18px}
 .form-submit{width:100%;justify-content:center;border:0;cursor:pointer}
 .form-submit:disabled{opacity:.6;cursor:default}
 .form-privacy-note{font-size:12.5px;color:var(--muted);margin-top:12px;line-height:1.5}
