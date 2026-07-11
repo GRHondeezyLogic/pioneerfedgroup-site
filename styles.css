@@ -34,9 +34,7 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 .eyebrow.dark{color:var(--navy-2)}
 .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:currentColor;flex:none}
 
-/* ---------- mark (compass star) ---------- */
-.mark path{fill:var(--gold)}
-.mark circle.ring{stroke:var(--gold)}
+/* ---------- mark (PFG crest — colors are inline in the SVG) ---------- */
 
 /* ---------- nav ---------- */
 .nav{
@@ -45,7 +43,7 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 }
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
 .brand{display:flex;align-items:center;gap:11px}
-.brand .mark{width:34px;height:34px;flex:none}
+.brand .mark{width:38px;height:42px;flex:none}
 .brand .name{color:#fff;font-family:"Archivo",sans-serif;font-weight:700;font-size:16.5px;letter-spacing:.01em;line-height:1.15}
 .brand .name small{display:block;font-family:"Public Sans",sans-serif;font-weight:600;font-size:9.5px;letter-spacing:.24em;color:var(--gold);text-transform:uppercase;margin-top:2px}
 .nav-links{display:flex;gap:34px;align-items:center}
@@ -139,8 +137,7 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
   background-size:22px 22px;
 }
 .mark-panel::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 45%, rgba(201,168,76,.14), transparent 65%)}
-.mark-panel .mark{width:38%;position:relative;z-index:1}
-.mark-panel .ring{stroke:rgba(201,168,76,.4)}
+.mark-panel .mark{width:42%;position:relative;z-index:1}
 .mark-panel .tag{position:absolute;bottom:28px;left:0;right:0;text-align:center;font-family:"Archivo";font-size:11px;font-weight:700;letter-spacing:.32em;color:rgba(201,168,76,.75);text-transform:uppercase}
 
 /* leadership */
@@ -199,7 +196,7 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 .footer a{color:rgba(255,255,255,.7);display:block;padding:4px 0;font-size:14.5px}
 .footer a:hover{color:var(--gold)}
 .footer .brandline{display:flex;gap:12px;align-items:center;margin-bottom:16px}
-.footer .brandline .mark{width:32px;height:32px}
+.footer .brandline .mark{width:30px;height:33px}
 .footer .brandline span{font-family:"Archivo",sans-serif;font-weight:700;color:#fff;font-size:16px}
 .footer p{font-size:14px;max-width:40ch}
 .footer .legal{border-top:1px solid rgba(255,255,255,.12);padding:22px 0;font-size:12.5px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
