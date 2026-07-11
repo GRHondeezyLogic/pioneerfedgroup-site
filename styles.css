@@ -108,6 +108,7 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 .rotator > span{
   grid-area:1/1;position:relative;white-space:pre;opacity:0;
   transition:opacity .3s ease;padding-bottom:5px;
+  justify-self:start;width:max-content;
 }
 .rotator > span.on{opacity:1}
 .rotator .ch{
