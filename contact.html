@@ -25,6 +25,7 @@
       <a href="about.html">About</a>
       <a href="services.html">Capabilities</a>
       <a href="capability-statement.html">Capability Statement</a>
+      <a href="faq.html">FAQ</a>
       <a href="contact.html" class="active nav-cta">Contact</a>
     </div>
   </div>
@@ -43,25 +44,60 @@
   <div class="wrap">
   <div class="contact-grid">
     <div class="contact-card">
-      <h3>Reach Us</h3>
-      <div class="row">
-        <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="1.5" stroke="#0C2340" stroke-width="1.5"/><path d="M3 6l7 5 7-5" stroke="#C9A84C" stroke-width="1.5"/></svg>
-        <div><b>General Inquiries</b><a href="mailto:info@pioneerfedgroup.com">info@pioneerfedgroup.com</a></div>
-      </div>
-      <div class="row">
-        <svg viewBox="0 0 20 20" fill="none"><path d="M4 3h3l1.5 4-2 1.5a11 11 0 005 5L13 11.5l4 1.5v3a1.5 1.5 0 01-1.6 1.5C8.6 17 3 11.4 2.5 4.6A1.5 1.5 0 014 3z" stroke="#0C2340" stroke-width="1.5"/></svg>
-        <div><b>Phone</b><a href="tel:+19544057414">(954) 405-7414</a></div>
-      </div>
-      <div class="row">
-        <svg viewBox="0 0 20 20" fill="none"><path d="M10 18s6-5.2 6-9.5A6 6 0 004 8.5C4 12.8 10 18 10 18z" stroke="#0C2340" stroke-width="1.5"/><circle cx="10" cy="8.5" r="2" stroke="#C9A84C" stroke-width="1.5"/></svg>
-        <div><b>Headquarters</b><span>Atlanta, Georgia</span></div>
-      </div>
+      <h3>Send Us a Message</h3>
+      <!-- Web3Forms access key goes here. Get one free at https://web3forms.com
+           by entering info@pioneerfedgroup.com, then paste the key below. -->
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="a91ff965-cd49-47b3-b2f3-546add701a27">
+        <input type="hidden" name="subject" value="New message from pioneerfedgroup.com">
+        <input type="hidden" name="from_name" value="Pioneer Federal Group Website">
+        <input type="checkbox" name="botcheck" class="form-honeypot" tabindex="-1" autocomplete="off">
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="f-name">Name</label>
+            <input type="text" id="f-name" name="name" required>
+          </div>
+          <div class="form-field">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" required>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="f-phone">Phone (Optional)</label>
+          <input type="tel" id="f-phone" name="phone">
+        </div>
+        <div class="form-field">
+          <label for="f-message">Message</label>
+          <textarea id="f-message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn solid form-submit">Send Message</button>
+        <div id="form-status" class="form-status" role="status"></div>
+      </form>
     </div>
 
-    <div class="data-block" style="display:flex;flex-direction:column;justify-content:center;gap:14px">
-      <h3 style="margin-bottom:0">Registration Status</h3>
-      <p style="font-size:15px;color:rgba(255,255,255,.78)">SAM.gov registration in progress. UEI and CAGE Code pending.</p>
-      <a href="capability-statement.html" style="color:var(--gold-soft);font-weight:700;font-size:14px;text-decoration:underline">Full company data &amp; certifications →</a>
+    <div class="contact-side">
+      <div class="contact-card">
+        <h3>Reach Us</h3>
+        <div class="row">
+          <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="1.5" stroke="#0C2340" stroke-width="1.5"/><path d="M3 6l7 5 7-5" stroke="#C9A84C" stroke-width="1.5"/></svg>
+          <div><b>General Inquiries</b><a href="mailto:info@pioneerfedgroup.com">info@pioneerfedgroup.com</a></div>
+        </div>
+        <div class="row">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M4 3h3l1.5 4-2 1.5a11 11 0 005 5L13 11.5l4 1.5v3a1.5 1.5 0 01-1.6 1.5C8.6 17 3 11.4 2.5 4.6A1.5 1.5 0 014 3z" stroke="#0C2340" stroke-width="1.5"/></svg>
+          <div><b>Phone</b><a href="tel:+19544057414">(954) 405-7414</a></div>
+        </div>
+        <div class="row">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M10 18s6-5.2 6-9.5A6 6 0 004 8.5C4 12.8 10 18 10 18z" stroke="#0C2340" stroke-width="1.5"/><circle cx="10" cy="8.5" r="2" stroke="#C9A84C" stroke-width="1.5"/></svg>
+          <div><b>Headquarters</b><span>Atlanta, Georgia</span></div>
+        </div>
+      </div>
+
+      <div class="data-block" style="border-radius:8px">
+        <h3 style="margin-bottom:14px">What Happens Next</h3>
+        <p style="font-size:15px;color:rgba(255,255,255,.78)">We read every message ourselves. Most people hear back within one business day.</p>
+        <p style="font-size:15px;color:rgba(255,255,255,.78);margin-top:14px">Looking for certifications, NAICS codes, or company data instead? <a href="capability-statement.html" style="color:var(--gold-soft);font-weight:700;text-decoration:underline">See our Capability Statement</a>.</p>
+      </div>
     </div>
   </div>
   </div>
@@ -82,6 +118,7 @@
         <a href="about.html">About Us</a>
         <a href="services.html">Capabilities</a>
         <a href="capability-statement.html">Capability Statement</a>
+        <a href="faq.html">FAQ</a>
         <a href="contact.html">Contact</a>
       </div>
       <div>
@@ -98,5 +135,6 @@
 </footer>
 
 <script src="rotate.js"></script>
+<script src="contact-form.js"></script>
 </body>
 </html>
