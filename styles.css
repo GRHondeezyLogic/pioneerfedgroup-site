@@ -300,6 +300,8 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 .faq-item:first-child{border-top:0}
 .faq-item h3{font-size:17px;margin-bottom:8px;letter-spacing:-.005em}
 .faq-item p{font-size:15px;color:var(--muted);line-height:1.65}
+.faq-item p a{color:var(--navy-2);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.faq-item p a:hover{color:var(--navy)}
 .faq-section + .faq-section{margin-top:52px}
 
 /* footer */
