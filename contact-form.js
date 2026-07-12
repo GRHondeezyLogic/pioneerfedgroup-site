@@ -29,13 +29,26 @@
     }
 
     // Loose phone format check. Only runs if a phone number was entered.
+    // US/Canada numbers are 10 digits; other countries vary, so allow 5-14.
+    var countryField = document.getElementById('f-phone-country');
     if (phoneField && phoneField.value.trim()) {
       var digits = phoneField.value.replace(/\D/g, '');
-      if (digits.length < 10 || digits.length > 11) {
+      var isNanp = !countryField || countryField.value.indexOf('+1 ') === 0;
+      var min = isNanp ? 10 : 5;
+      var max = isNanp ? 11 : 14;
+      if (digits.length < min || digits.length > max) {
         showError('Please enter a valid phone number, or leave it blank.');
         phoneField.focus();
         return;
       }
+    }
+
+    // Loose zip check. Only runs if a zip was entered: 5 digits or ZIP+4.
+    var zipField = document.getElementById('f-zip');
+    if (zipField && zipField.value.trim() && !/^\d{5}(-?\d{4})?$/.test(zipField.value.trim())) {
+      showError('Please enter a valid zip code, or leave it blank.');
+      zipField.focus();
+      return;
     }
 
     // Reject obviously fake/profane email domains (e.g. troll addresses).
@@ -54,6 +67,16 @@
       }
     }
 
+    // hCaptcha check. The widget is injected by the Web3Forms client script;
+    // its token lands in a textarea named h-captcha-response. Web3Forms
+    // rejects submissions without a valid token once hCaptcha is enabled in
+    // the dashboard, so catch the empty case here with a friendlier message.
+    var hcaptchaField = form.querySelector('textarea[name="h-captcha-response"]');
+    if (!hcaptchaField || !hcaptchaField.value) {
+      showError('Please check the "I am human" box before sending.');
+      return;
+    }
+
     var key = form.querySelector('[name="access_key"]').value;
     if (!key || key === 'YOUR_WEB3FORMS_ACCESS_KEY') {
       showError('This form is not fully set up yet. Please email us directly at info@pioneerfedgroup.com.');
@@ -65,16 +88,24 @@
     submitBtn.textContent = 'Sending...';
     status.className = 'form-status';
 
+    // Skip the country code in the email when no phone number was given,
+    // so the select's default (+1 United States) doesn't show up as noise.
+    var formData = new FormData(form);
+    if (!phoneField || !phoneField.value.trim()) {
+      formData.delete('country_code');
+    }
+
     fetch(form.action, {
       method: 'POST',
       headers: { Accept: 'application/json' },
-      body: new FormData(form)
+      body: formData
     })
       .then(function (res) { return res.json(); })
       .then(function (json) {
         if (json.success) {
           form.reset();
           if (loadedAtField) loadedAtField.value = String(Date.now());
+          if (window.hcaptcha) window.hcaptcha.reset();
           status.textContent = 'Message sent. We will get back to you within 24 to 72 hours.';
           status.className = 'form-status show success';
         } else {
