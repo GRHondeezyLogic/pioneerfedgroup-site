@@ -69,10 +69,15 @@
           </div>
         </div>
 
-        <div class="form-row">
+        <div class="form-field">
+          <label for="f-email">Email</label>
+          <input type="email" id="f-email" name="email" autocomplete="email" required>
+        </div>
+
+        <div class="form-row form-row-phone">
           <div class="form-field">
-            <label for="f-email">Email</label>
-            <input type="email" id="f-email" name="email" autocomplete="email" required>
+            <label for="f-phone-country">Country Code</label>
+            <select id="f-phone-country" name="country_code"></select>
           </div>
           <div class="form-field">
             <label for="f-phone">Phone (Optional)</label>
@@ -103,14 +108,42 @@
         </div>
 
         <div class="form-field">
-          <label for="f-address">Business Address (Optional)</label>
-          <input type="text" id="f-address" name="business_address" autocomplete="street-address">
+          <label for="f-address1">Address 1 (Optional)</label>
+          <input type="text" id="f-address1" name="address_line_1" autocomplete="address-line1" placeholder="Street address">
+        </div>
+
+        <div class="form-field">
+          <label for="f-address2">Address 2 (Optional)</label>
+          <input type="text" id="f-address2" name="address_line_2" autocomplete="address-line2" placeholder="Suite, unit, building, floor, etc.">
+        </div>
+
+        <div class="form-row form-row-citystate">
+          <div class="form-field">
+            <label for="f-city">City (Optional)</label>
+            <input type="text" id="f-city" name="city" autocomplete="address-level2">
+          </div>
+          <div class="form-field">
+            <label for="f-state">State (Optional)</label>
+            <select id="f-state" name="state"></select>
+          </div>
+          <div class="form-field">
+            <label for="f-zip">Zip Code (Optional)</label>
+            <input type="text" id="f-zip" name="zip_code" inputmode="numeric" autocomplete="postal-code" maxlength="10" placeholder="30301">
+          </div>
         </div>
 
         <div class="form-field">
           <label for="f-message">Message</label>
           <textarea id="f-message" name="message" required></textarea>
         </div>
+
+        <!-- hCaptcha via Web3Forms' zero-config integration (free plan).
+             The widget is injected by https://web3forms.com/client/script.js
+             using Web3Forms' shared free-plan sitekey, so the token it issues
+             validates against the secret Web3Forms holds. Do NOT swap in a
+             custom sitekey here: on the free plan Web3Forms cannot verify it
+             and every submission will fail with "Could not validate hCaptcha". -->
+        <div class="h-captcha" data-captcha="true"></div>
 
         <button type="submit" class="btn solid form-submit">Send Message</button>
         <p class="form-privacy-note">*Disclaimer* Submitting sends your information directly to Pioneer Federal Group. It is not stored on this website or shared with any other party.</p>
@@ -182,6 +215,8 @@
 </footer>
 
 <script src="rotate.js"></script>
+<script src="country-codes.js"></script>
 <script src="contact-form.js"></script>
+<script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>

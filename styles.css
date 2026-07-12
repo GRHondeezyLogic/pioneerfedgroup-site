@@ -361,6 +361,8 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 /* contact form */
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .form-row-name{grid-template-columns:2fr .7fr 2fr}
+.form-row-phone{grid-template-columns:1.2fr 1fr}
+.form-row-citystate{grid-template-columns:1.4fr 1.1fr .8fr}
 .form-field{margin-bottom:18px}
 .form-field-mi input{text-align:center}
 .form-field label{display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:7px}
@@ -378,6 +380,7 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 .form-field input:focus,.form-field textarea:focus,.form-field select:focus{outline:2px solid var(--gold);outline-offset:1px;background:#fff}
 .form-field textarea{resize:vertical;min-height:130px;font-family:inherit}
 .form-honeypot{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.h-captcha{margin-bottom:18px}
 .form-submit{width:100%;justify-content:center;border:0;cursor:pointer}
 .form-submit:disabled{opacity:.6;cursor:default}
 .form-privacy-note{font-size:12.5px;color:var(--muted);margin-top:12px;line-height:1.5}
@@ -386,7 +389,7 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 .form-status.success{background:rgba(47,107,76,.09);color:#2f6b4c;border:1px solid rgba(47,107,76,.28)}
 .form-status.error{background:rgba(156,74,52,.09);color:#9c4a34;border:1px solid rgba(156,74,52,.28)}
 @media (max-width:560px){
-  .form-row,.form-row-name{grid-template-columns:1fr}
+  .form-row,.form-row-name,.form-row-phone,.form-row-citystate{grid-template-columns:1fr}
 }
 
 /* FAQ */
