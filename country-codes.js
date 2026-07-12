@@ -1,7 +1,8 @@
 // Populates the contact form's dropdowns:
 //  - Country dial-code select: ISO 3166-1 list (name, ISO2 code, ITU dial
-//    code) sourced from datasets/country-codes. Flag emoji are generated at
-//    runtime from each ISO2 code rather than stored per-entry.
+//    code) sourced from datasets/country-codes. Labels are plain
+//    "Name (+code)" — flag emoji render as bare two-letter codes on
+//    Windows, which reads as clutter.
 //  - State select: US states, DC, and territories (federal-contracting
 //    audience), with a fallback option for non-US addresses.
 (function () {
@@ -256,19 +257,12 @@
     {code:"AX",name:"Åland Islands",dial:"+358"}
   ];
 
-  function flagEmoji(iso2) {
-    var chars = iso2.toUpperCase().split('').map(function (c) {
-      return 0x1F1E6 + (c.charCodeAt(0) - 65);
-    });
-    return String.fromCodePoint.apply(null, chars);
-  }
-
   var countrySelect = document.getElementById('f-phone-country');
   if (countrySelect) {
     COUNTRIES.forEach(function (c) {
       var opt = document.createElement('option');
       opt.value = c.dial + ' ' + c.name;
-      opt.textContent = flagEmoji(c.code) + ' ' + c.name + ' (' + c.dial + ')';
+      opt.textContent = c.name + ' (' + c.dial + ')';
       if (c.code === 'US') opt.defaultSelected = true; // survives form.reset()
       countrySelect.appendChild(opt);
     });
