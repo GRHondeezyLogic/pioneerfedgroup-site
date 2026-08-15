@@ -512,3 +512,22 @@ h1,h2,h3,.display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;let
 @media (prefers-reduced-motion:reduce){
   .reveal{opacity:1;transform:none;transition:none}
 }
+
+/* capability statement download block */
+.doc-download{background:var(--navy);border-top:3px solid var(--gold);padding:64px 0;text-align:center}
+.doc-download .wrap{max-width:680px}
+.doc-download-icon{width:46px;height:46px;display:block;margin:0 auto 20px}
+.doc-download h2{color:#fff;font-size:clamp(23px,2.8vw,32px);margin-bottom:14px}
+.doc-download p{color:rgba(255,255,255,.76);font-size:16px;margin:0 auto 28px;max-width:56ch}
+.doc-download-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+@media (max-width:560px){
+  .doc-download{padding:48px 0}
+  .doc-download-actions .btn{width:100%;justify-content:center}
+}
+
+/* services focus split — grids sized to their card count so no empty cells show */
+.grid.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid.grid-4{grid-template-columns:repeat(2,1fr)}
+@media (max-width:640px){
+  .grid.grid-2,.grid.grid-4{grid-template-columns:1fr}
+}
