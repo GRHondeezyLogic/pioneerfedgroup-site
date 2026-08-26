@@ -18,7 +18,7 @@ document.querySelectorAll('.rotator').forEach(function (el) {
       w.split('').forEach(function (c, j) {
         var ch = document.createElement('i');
         ch.className = 'ch';
-        ch.textContent = c === ' ' ? ' ' : c;
+        ch.textContent = c === ' ' ? '\u00a0' : c;
         ch.style.transitionDelay = (j * 28) + 'ms';
         s.appendChild(ch);
       });
