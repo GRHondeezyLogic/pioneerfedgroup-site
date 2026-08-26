@@ -1,184 +1,191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Capability Statement — Pioneer Federal Group</title>
-<meta name="description" content="Pioneer Federal Group capability statement. SDVOSB, VOSB, and Small Business set-aside eligibility, NAICS codes, core competencies, and company data for contracting officers.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Capability Statement &mdash; Pioneer Federal Group</title>
+<meta name="description" content="Set-aside eligibility, NAICS codes, core competencies, and company data for Pioneer Federal Group. SDVOSB &middot; VOSB &middot; Small Business. SAM.gov Active &middot; UEI CPL4BBE1VFF9 &middot; CAGE 238V9." />
+<link rel="preload" href="./fonts/GeistMono-Variable.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./css/site.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 53'%3E%3Cpath d='M24 1.5 L45 9 V25 C45 37.5 36.5 45.5 24 51 C11.5 45.5 3 37.5 3 25 V9 Z' fill='%230C2340' stroke='%23C9A84C' stroke-width='1.6'/%3E%3Ctext x='24' y='22.5' text-anchor='middle' font-family='Georgia, serif' font-weight='700' font-size='11.5' fill='%23C9A84C'%3EPFG%3C/text%3E%3C/svg%3E" />
 </head>
-<body>
+<body data-scene="3">
+
+<canvas id="stage" aria-hidden="true"></canvas>
+<div class="fx-scrim" aria-hidden="true"></div>
 
 <nav class="nav">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Pioneer Federal Group home">
+    <a class="brand" href="index.html">
       <svg class="mark" viewBox="0 0 48 53" fill="none" aria-hidden="true"><path d="M24 1.5 L45 9 V25 C45 37.5 36.5 45.5 24 51 C11.5 45.5 3 37.5 3 25 V9 Z" fill="#0C2340" stroke="#C9A84C" stroke-width="1.6"/><path d="M24 5 L41.5 11.3 V24.6 C41.5 35.2 34.4 42 24 46.8 C13.6 42 6.5 35.2 6.5 24.6 V11.3 Z" fill="none" stroke="#C9A84C" stroke-width="0.5" opacity="0.5"/><text x="24" y="22.5" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="11.5" fill="#C9A84C" letter-spacing="0.4">PFG</text><line x1="13" y1="27" x2="35" y2="27" stroke="#C9A84C" stroke-width="0.9" opacity="0.7"/><path d="M21 32 L24 29.5 L27 32 L24 34.5 Z" fill="#E3CD8B"/><path d="M24 29.5 L27 32 L24 34.5 Z" fill="#C9A84C"/><g transform="translate(24,40)"><circle cx="0" cy="-1.6" r="1.7" fill="#C9A84C"/><circle cx="-1.8" cy="1" r="1.7" fill="#C9A84C"/><circle cx="1.8" cy="1" r="1.7" fill="#C9A84C"/><path d="M0 0 L0 3.6" stroke="#C9A84C" stroke-width="1" stroke-linecap="round"/></g></svg>
       <span class="name">Pioneer Federal Group<small>SDVOSB</small></span>
     </a>
-    <button class="nav-toggle" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Capabilities</a>
-      <a href="capability-statement.html" class="active">Capability Statement</a>
+      <a href="capability-statement.html" class="active" aria-current="page">Capability Statement</a>
       <a href="faq.html">FAQ</a>
       <a href="contact.html" class="nav-cta">Contact</a>
     </div>
   </div>
 </nav>
 
-<header class="page-hero">
-  <div class="wrap">
-    <span class="eyebrow"><span class="dot"></span>Capability Statement</span>
-    <h1>Our qualifications, at a glance.</h1>
-    <p>Everything a contracting officer or teaming partner needs to evaluate Pioneer Federal Group is here. Set-aside eligibility, NAICS codes, core competencies, and company data. Download the one-page PDF below and forward it to your team.</p>
-    <p class="rotate-line">Eligible for <span class="rotator" data-rotate='["SDVOSB set-asides.","VOSB set-asides.","Small Business set-asides."]'>SDVOSB set-asides.</span></p>
-  </div>
-</header>
-
-<section class="doc-download">
-  <div class="wrap">
-    <svg class="doc-download-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" stroke="#C9A84C" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 3v5h5" stroke="#C9A84C" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 11v6m0 0l-2.5-2.5M12 17l2.5-2.5" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    <h2>Pioneer Federal Group Capability Statement</h2>
-    <p>One page covering our set-aside status, NAICS and PSC codes, core competencies, differentiators, and company data. Download it, forward it, put it in front of your team.</p>
-    <div class="doc-download-actions">
-      <a class="btn solid" href="assets/PFG-Capability-Statement.pdf" download>Download PDF</a>
-      <a class="btn ghost" href="assets/PFG-Capability-Statement.pdf" target="_blank" rel="noopener noreferrer">View in Browser</a>
-    </div>
-  </div>
-</section>
-
-<section class="section roomy">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow dark"><span class="dot"></span>Set-Aside Eligibility</span>
-      <h2>Three ways to award us the work.</h2>
-    </div>
-    <div class="cert-grid">
-      <div class="cert-card">
-        <div class="badge"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3z" stroke="#C9A84C" stroke-width="1.5"/><path d="M9 12l2 2 4-4" stroke="#0C2340" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <h3>SDVOSB</h3>
-        <span class="status-chip on-light"><span class="dot"></span>Certification In Progress</span>
-        <p>Service-Disabled Veteran-Owned Small Business. Desi Pelaez Jr, a 100% P&amp;T-rated Marine Corps veteran, holds 51% ownership and controlling management authority.</p>
-      </div>
-      <div class="cert-card">
-        <div class="badge"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3z" stroke="#C9A84C" stroke-width="1.5"/><path d="M9 12l2 2 4-4" stroke="#0C2340" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <h3>VOSB</h3>
-        <span class="status-chip on-light"><span class="dot"></span>Certification In Progress</span>
-        <p>Veteran-Owned Small Business. Majority-owned and operated by a United States Marine Corps veteran with direct, day-to-day management control.</p>
-      </div>
-      <div class="cert-card">
-        <div class="badge"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3z" stroke="#C9A84C" stroke-width="1.5"/><path d="M9 12l2 2 4-4" stroke="#0C2340" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <h3>Small Business</h3>
-        <span class="status-chip on-light"><span class="dot"></span>Eligible</span>
-        <p>Qualifies as a Small Business under SBA size standards for our target NAICS codes, opening eligibility for SB set-aside solicitations.</p>
+<main>
+  <header class="page-hero">
+    <div class="wrap">
+      <div class="panel">
+        <span class="eyebrow">Capability Statement</span>
+        <h1>Our qualifications, at a glance.</h1>
+        <p class="lead">Everything a contracting officer or teaming partner needs to evaluate Pioneer Federal Group is here. Set-aside eligibility, NAICS codes, core competencies, and company data. Download the one-page PDF below and forward it to your team.</p>
+        <p class="rotate-line">Eligible for <span class="rotator" data-rotate='["SDVOSB set-asides."]'>SDVOSB set-asides.</span></p>
       </div>
     </div>
+  </header>
 
-    <div class="sam-panel">
-      <div>
-        <h3>SAM.gov Registration Active</h3>
-        <p>Pioneer Fed Group LLC is registered and Active in SAM.gov with a Unique Entity ID and CAGE Code on record. Contracting officers can verify us in SAM.gov directly or request documentation.</p>
+  <section class="section tight">
+    <div class="wrap">
+      <div class="panel">
+        <div class="doc-download">
+          <div>
+            <h3>Pioneer Federal Group Capability Statement</h3>
+            <p>One page covering our set-aside status, NAICS and PSC codes, core competencies, differentiators, and company data. Download it, forward it, put it in front of your team.</p>
+          </div>
+          <div class="doc-actions">
+            <a class="btn solid" href="./assets/PFG-Capability-Statement.pdf" download>Download PDF</a>
+            <a class="btn ghost" href="./assets/PFG-Capability-Statement.pdf" target="_blank" rel="noopener">View in Browser</a>
+          </div>
+        </div>
       </div>
-      <span class="status-chip on-dark"><span class="dot"></span>SAM.gov Active</span>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section alt roomy">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow dark"><span class="dot"></span>NAICS Codes</span>
-      <h2>Where we compete.</h2>
-    </div>
-    <div class="naics-table">
-      <div class="naics-head"><span>Code</span><span>Description</span></div>
-      <div class="naics-row"><span class="code">561210</span><span class="title">Facilities Support Services (Primary)</span></div>
-      <div class="naics-row"><span class="code">561730</span><span class="title">Grounds Maintenance &amp; Landscaping</span></div>
-      <div class="naics-row"><span class="code">236220</span><span class="title">Construction &amp; Renovation</span></div>
-      <div class="naics-row"><span class="code">484230</span><span class="title">Specialized Freight &amp; Hazmat Transport</span></div>
-      <div class="naics-row"><span class="code">484210</span><span class="title">Moving &amp; Relocation Services</span></div>
-      <div class="naics-row"><span class="code">561990</span><span class="title">General Support Services</span></div>
-    </div>
-    <div class="hero-cta" style="margin-top:34px">
-      <a class="btn navy" href="services.html">See Full Capability Descriptions</a>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="data-block">
-      <h3>Company Data</h3>
-      <dl class="data-rows">
-        <div class="data-row"><dt>Legal Name</dt><dd>Pioneer Fed Group LLC</dd></div>
-        <div class="data-row"><dt>DBA</dt><dd>Pioneer Federal Group</dd></div>
-        <div class="data-row"><dt>State of Formation</dt><dd>Georgia</dd></div>
-        <div class="data-row"><dt>Business Structure</dt><dd>Manager-Managed LLC</dd></div>
-        <div class="data-row"><dt>UEI</dt><dd>CPL4BBE1VFF9</dd></div>
-        <div class="data-row"><dt>CAGE Code</dt><dd>238V9</dd></div>
-        <div class="data-row"><dt>SAM.gov Status</dt><dd>Active</dd></div>
-        <div class="data-row"><dt>Set-Asides</dt><dd>SDVOSB · VOSB · Small Business</dd></div>
-        <div class="data-row"><dt>Primary NAICS</dt><dd>561210 Facilities Support Services</dd></div>
-        <div class="data-row"><dt>Additional NAICS</dt><dd>561730 · 236220 · 484230 · 484210 · 561990</dd></div>
-      </dl>
-    </div>
-  </div>
-</section>
-
-<section class="cta-strip">
-  <div class="wrap">
-    <div class="cta-strip-inner">
-      <div>
-        <h2>Need It in Writing?</h2>
-        <p>The one-page capability statement is above. Teaming information, registration documentation, and pricing discussions go straight to a decision-maker, not a queue.</p>
+  <section class="section roomy">
+    <div class="wrap">
+      <div class="panel">
+        <div class="section-head">
+          <span class="eyebrow">Set-Aside Eligibility</span>
+          <h2 class="h2">Three ways to award us the work.</h2>
+        </div>
+        <div class="grid">
+          <article class="card cert-card">
+            <h3>SDVOSB</h3>
+            <p class="badge">Certification In Progress</p>
+            <p>Service-Disabled Veteran-Owned Small Business. Desi Pelaez Jr, a 100% P&amp;T-rated Marine Corps veteran, holds 51% ownership and controlling management authority.</p>
+          </article>
+          <article class="card cert-card">
+            <h3>VOSB</h3>
+            <p class="badge">Certification In Progress</p>
+            <p>Veteran-Owned Small Business. Majority-owned and operated by a United States Marine Corps veteran with direct, day-to-day management control.</p>
+          </article>
+          <article class="card cert-card">
+            <h3>Small Business</h3>
+            <p class="badge ok">Eligible</p>
+            <p>Qualifies as a Small Business under SBA size standards for our target NAICS codes, opening eligibility for SB set-aside solicitations.</p>
+          </article>
+        </div>
+        <div class="sam-panel">
+          <strong>SAM.gov Registration Active.</strong> Pioneer Fed Group LLC is registered and Active in SAM.gov with a Unique Entity ID and CAGE Code on record. Contracting officers can verify us in SAM.gov directly or request documentation.
+        </div>
       </div>
-      <a class="btn solid" href="mailto:info@pioneerfedgroup.com?subject=Capability%20Statement%20Request">Contact Us About Teaming</a>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="section alt roomy">
+    <div class="wrap">
+      <div class="panel">
+        <div class="section-head">
+          <span class="eyebrow">NAICS Codes</span>
+          <h2 class="h2">Where we compete.</h2>
+        </div>
+        <div class="naics-table">
+          <div class="naics-row"><span class="code">561210</span><span class="title">Facilities Support Services (Primary)</span></div>
+          <div class="naics-row"><span class="code">561730</span><span class="title">Grounds Maintenance &amp; Landscaping</span></div>
+          <div class="naics-row"><span class="code">236220</span><span class="title">Construction &amp; Renovation</span></div>
+          <div class="naics-row"><span class="code">484230</span><span class="title">Specialized Freight &amp; Hazmat Transport</span></div>
+          <div class="naics-row"><span class="code">484210</span><span class="title">Moving &amp; Relocation Services</span></div>
+          <div class="naics-row"><span class="code">561990</span><span class="title">General Support Services</span></div>
+        </div>
+        <p style="margin-top:16px"><a class="inline-link" href="services.html">See Full Capability Descriptions</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="panel">
+        <div class="section-head">
+          <span class="eyebrow">Company Data</span>
+        </div>
+        <dl class="data-grid">
+          <div><dt>Legal Name</dt><dd>Pioneer Fed Group LLC</dd></div>
+          <div><dt>DBA</dt><dd>Pioneer Federal Group</dd></div>
+          <div><dt>State of Formation</dt><dd>Georgia</dd></div>
+          <div><dt>Business Structure</dt><dd>Manager-Managed LLC</dd></div>
+          <div><dt>UEI</dt><dd>CPL4BBE1VFF9</dd></div>
+          <div><dt>CAGE Code</dt><dd>238V9</dd></div>
+          <div><dt>SAM.gov Status</dt><dd>Active</dd></div>
+          <div><dt>Set-Asides</dt><dd>SDVOSB &middot; VOSB &middot; Small Business</dd></div>
+          <div><dt>Primary NAICS</dt><dd>561210 Facilities Support Services</dd></div>
+          <div><dt>Additional NAICS</dt><dd>561730 &middot; 236220 &middot; 484230 &middot; 484210 &middot; 561990</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="wrap">
+      <div class="panel">
+        <div class="cta-strip-inner">
+          <div>
+            <h2 class="h2">Need It in Writing?</h2>
+            <p>The one-page capability statement is above. Teaming information, registration documentation, and pricing discussions go straight to a decision-maker, not a queue.</p>
+          </div>
+          <a class="btn solid" href="contact.html">Contact Us About Teaming</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer class="footer">
   <div class="wrap">
     <div class="top">
       <div>
-        <div class="brandline">
+        <a class="brandline" href="index.html">
           <svg class="mark" viewBox="0 0 48 53" fill="none" aria-hidden="true"><path d="M24 1.5 L45 9 V25 C45 37.5 36.5 45.5 24 51 C11.5 45.5 3 37.5 3 25 V9 Z" fill="#0C2340" stroke="#C9A84C" stroke-width="1.6"/><path d="M24 5 L41.5 11.3 V24.6 C41.5 35.2 34.4 42 24 46.8 C13.6 42 6.5 35.2 6.5 24.6 V11.3 Z" fill="none" stroke="#C9A84C" stroke-width="0.5" opacity="0.5"/><text x="24" y="22.5" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="11.5" fill="#C9A84C" letter-spacing="0.4">PFG</text><line x1="13" y1="27" x2="35" y2="27" stroke="#C9A84C" stroke-width="0.9" opacity="0.7"/><path d="M21 32 L24 29.5 L27 32 L24 34.5 Z" fill="#E3CD8B"/><path d="M24 29.5 L27 32 L24 34.5 Z" fill="#C9A84C"/><g transform="translate(24,40)"><circle cx="0" cy="-1.6" r="1.7" fill="#C9A84C"/><circle cx="-1.8" cy="1" r="1.7" fill="#C9A84C"/><circle cx="1.8" cy="1" r="1.7" fill="#C9A84C"/><path d="M0 0 L0 3.6" stroke="#C9A84C" stroke-width="1" stroke-linecap="round"/></g></svg>
           <span>Pioneer Federal Group</span>
-        </div>
+        </a>
         <p>A service-disabled veteran-owned contracting company delivering facilities, logistics, construction, and general services to federal agencies.</p>
-        <div class="footer-social">
-          <a href="https://www.linkedin.com/company/pioneerfedgroup/" target="_blank" rel="noopener noreferrer" aria-label="Pioneer Federal Group on LinkedIn">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-          </a>
-        </div>
       </div>
-      <div>
+      <div class="footcol">
         <h4>Company</h4>
         <a href="about.html">About Us</a>
         <a href="services.html">Capabilities</a>
         <a href="capability-statement.html">Capability Statement</a>
-        <a href="assets/PFG-Capability-Statement.pdf" download>Download Capability Statement (PDF)</a>
+        <a href="./assets/PFG-Capability-Statement.pdf" download>Download Capability Statement (PDF)</a>
         <a href="faq.html">FAQ</a>
         <a href="contact.html">Contact</a>
       </div>
-      <div>
+      <div class="footcol">
         <h4>Contact</h4>
         <a href="mailto:info@pioneerfedgroup.com">info@pioneerfedgroup.com</a>
         <a href="tel:+19544057414">(954) 405-7414</a>
+        <a href="https://www.linkedin.com/company/pioneerfedgroup/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
     <div class="legal">
-      <span>© 2026 Pioneer Fed Group LLC, DBA Pioneer Federal Group. All rights reserved.</span>
+      <span>&copy; 2026 Pioneer Fed Group LLC, DBA Pioneer Federal Group. All rights reserved.</span>
       <span class="gold">Semper Fidelis</span>
     </div>
   </div>
 </footer>
 
-<script src="rotate.js"></script>
+<script src="./js/rotate.js"></script>
+<script type="module" src="./js/bg.js"></script>
 </body>
 </html>

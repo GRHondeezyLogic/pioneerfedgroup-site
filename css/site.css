@@ -37,7 +37,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; background: var(--bg); }
 
 body {
   margin: 0;
@@ -743,3 +743,261 @@ main { position: relative; z-index: 4; }
   .reveal { opacity: 1; transform: none; transition: none; }
   #stage { transition: none; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   RECONCILED COMPONENTS
+   The original site's box/section language, re-rendered on the glass system.
+   Additive only — nothing above this line was removed or altered.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── interior page hero (original .page-hero rhythm, shorter than home) ────── */
+.page-hero { padding: clamp(112px, 16vh, 168px) var(--pad) clamp(34px, 5vh, 58px); }
+.page-hero .panel { padding: clamp(28px, 4vw, 52px); max-width: 900px; }
+.page-hero h1 {
+  font-family: var(--f-display);
+  font-size: clamp(2rem, 4.2vw, 3.2rem);
+  font-weight: 800; letter-spacing: -0.026em; line-height: 1.06;
+  margin: 0 0 20px;
+}
+.page-hero h1 .accent { color: var(--gold); }
+
+/* ── section modifiers ────────────────────────────────────────────────────── */
+.section.alt > .wrap > .panel { background: var(--glass-2); }
+.section.roomy { padding-top: clamp(84px, 13vh, 148px); padding-bottom: clamp(84px, 13vh, 148px); }
+
+/* ── section head (eyebrow + h2 + deck) ───────────────────────────────────── */
+.section-head { max-width: 64ch; margin-bottom: clamp(26px, 4vh, 44px); }
+.section-head h2 { margin-bottom: 14px; }
+.section-head p { color: var(--muted); font-size: clamp(15px, 1.1vw, 17px); line-height: 1.72; margin: 0; }
+
+/* ── eyebrow (original label above section headings) ──────────────────────── */
+.eyebrow {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--f-mono); font-size: 10.5px; letter-spacing: 0.26em;
+  text-transform: uppercase; color: var(--gold); margin: 0 0 16px;
+}
+.eyebrow::before { content: ""; width: 26px; height: 1px; background: var(--gold); flex: none; }
+
+/* ── grids (original 3-up default, 2-up and 4-up variants) ────────────────── */
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
+.grid.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid.grid-4 { grid-template-columns: repeat(2, 1fr); }
+
+/* ── NAICS badge on capability cards ──────────────────────────────────────── */
+.card .naics {
+  display: inline-block; font-family: var(--f-mono); font-size: 10px;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
+  border: 1px solid rgba(201, 168, 76, 0.4); background: rgba(201, 168, 76, 0.1);
+  border-radius: 100px; padding: 4px 11px; margin: 0 0 12px;
+  transition: background 0.35s var(--ease), color 0.35s var(--ease);
+}
+.card:hover .naics { background: var(--gold); color: var(--navy); }
+.card h3 { font-family: var(--f-display); font-size: 1.08rem; font-weight: 700; color: var(--paper); margin: 0 0 10px; }
+
+/* ── tick list (original bulleted value/delivery list) ────────────────────── */
+.list { display: grid; gap: 16px; margin-top: 22px; }
+.list li { display: grid; grid-template-columns: 22px 1fr; gap: 14px; align-items: start; }
+.list .tick { width: 22px; height: 22px; margin-top: 3px; flex: none; }
+.list b { font-family: var(--f-display); color: var(--paper); font-weight: 700; }
+.list span { font-size: 15px; line-height: 1.72; color: var(--muted); }
+
+/* ── split (original two-column feature row) ──────────────────────────────── */
+.split { display: grid; grid-template-columns: 1.25fr 0.95fr; gap: clamp(24px, 3.5vw, 48px); align-items: start; }
+
+/* ── leadership cards ─────────────────────────────────────────────────────── */
+.people { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.person {
+  background: var(--glass-2);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border: 1px solid var(--hair-soft); border-top: 3px solid var(--gold);
+  border-radius: 10px; padding: 26px 26px 28px;
+  transition: transform 0.4s var(--ease), border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+.person:hover { transform: translateY(-3px); border-color: var(--hair); box-shadow: 0 22px 44px rgba(3, 8, 17, 0.45); }
+.person .role { font-family: var(--f-mono); font-size: 9.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin: 0 0 8px; }
+.person h3 { font-family: var(--f-display); font-size: 1.3rem; font-weight: 700; color: var(--paper); margin: 0 0 4px; }
+.person .sub { font-size: 12.5px; font-weight: 600; color: var(--gold-soft); margin: 0 0 14px; }
+.person p { font-size: 14.5px; line-height: 1.7; color: var(--muted); margin: 0 0 12px; }
+.person a { color: var(--gold); font-weight: 600; text-decoration: none; font-size: 14px; }
+.person a:hover { color: var(--gold-soft); }
+
+/* ── service framework (numbered 3-up) ────────────────────────────────────── */
+.framework-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.framework-item {
+  background: var(--glass-2);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border: 1px solid var(--hair-soft); border-radius: 10px; padding: 26px 24px;
+  transition: transform 0.4s var(--ease), border-color 0.4s var(--ease);
+}
+.framework-item:hover { transform: translateY(-3px); border-color: var(--hair); }
+.framework-num { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.2em; color: var(--gold); display: block; margin-bottom: 12px; }
+.framework-item h3 { font-family: var(--f-display); font-size: 1.05rem; font-weight: 700; color: var(--paper); margin: 0 0 10px; }
+.framework-item p { font-size: 14.5px; line-height: 1.7; color: var(--muted); margin: 0; }
+
+/* ── standard card + pull quote (about) ───────────────────────────────────── */
+.standard-card {
+  background: var(--glass-2);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border: 1px solid var(--hair-soft); border-left: 4px solid var(--gold);
+  border-radius: 0 12px 12px 0; padding: clamp(26px, 3.4vw, 40px);
+}
+.pull-quote { font-family: var(--f-display); font-size: clamp(1.05rem, 1.6vw, 1.32rem); font-weight: 600; line-height: 1.55; color: var(--paper); margin: 0 0 12px; }
+.standard-card cite { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; font-style: normal; color: var(--gold-soft); }
+
+/* ── NAICS table (capability statement) ───────────────────────────────────── */
+.naics-table {
+  border: 1px solid var(--hair-soft); border-radius: 10px; overflow: hidden;
+  background: var(--glass-2);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+}
+.naics-row { display: grid; grid-template-columns: 120px 1fr; gap: 18px; padding: 14px 20px; border-top: 1px solid var(--hair-soft); transition: background 0.3s var(--ease); }
+.naics-row:first-child { border-top: 0; }
+.naics-row:hover { background: rgba(201, 168, 76, 0.07); }
+.naics-row .code { font-family: var(--f-mono); font-size: 12.5px; letter-spacing: 0.08em; color: var(--gold); }
+.naics-row .title { font-size: 14.5px; color: var(--fg); }
+
+/* ── company data grid ────────────────────────────────────────────────────── */
+.data-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1px; background: var(--hair-soft);
+  border: 1px solid var(--hair-soft); border-radius: 10px; overflow: hidden;
+}
+.data-grid > div { background: var(--glass-2); padding: 16px 20px; }
+.data-grid dt { font-family: var(--f-mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dimmer); margin-bottom: 6px; }
+.data-grid dd { font-size: 14px; font-weight: 600; color: var(--paper); margin: 0; }
+
+/* ── certification cards ──────────────────────────────────────────────────── */
+.cert-card h3 { font-family: var(--f-display); font-size: 1.15rem; font-weight: 700; color: var(--paper); margin: 0 0 10px; }
+
+/* ── capability statement download block ──────────────────────────────────── */
+.doc-download {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px;
+  background: rgba(12, 35, 64, 0.82); border: 1px solid var(--hair);
+  border-radius: 12px; padding: 28px 30px;
+}
+.doc-download h3 { font-family: var(--f-display); font-size: 1.12rem; font-weight: 700; color: var(--paper); margin: 0 0 8px; }
+.doc-download p { font-size: 14px; line-height: 1.65; color: var(--muted); margin: 0; max-width: 54ch; }
+.doc-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ── FAQ accordion (original .faq-item / .faq-q / .faq-a structure) ───────── */
+.faq-list { display: grid; gap: 10px; }
+.faq-item {
+  background: var(--glass-2);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border: 1px solid var(--hair-soft); border-radius: 10px; overflow: hidden;
+}
+.faq-q {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 18px 22px; background: none; border: 0; cursor: pointer; text-align: left;
+  font-family: var(--f-display); font-size: 15px; font-weight: 700; color: var(--paper);
+  transition: color 0.3s var(--ease);
+}
+.faq-q:hover { color: var(--gold-soft); }
+.faq-chevron { width: 20px; height: 20px; color: var(--gold); flex: none; transition: transform 0.35s var(--ease); }
+.faq-item.open .faq-q { color: var(--gold-soft); }
+.faq-item.open .faq-chevron { transform: rotate(180deg); }
+/* raised well above the original 320px cap, which silently clipped long answers */
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.45s var(--ease); }
+.faq-item.open .faq-a { max-height: 1400px; }
+.faq-a p { padding: 0 22px 20px; font-size: 14.5px; line-height: 1.72; color: var(--muted); margin: 0; }
+.faq-a a { color: var(--gold); font-weight: 600; text-decoration: none; }
+.faq-a a:hover { text-decoration: underline; }
+
+/* ── quote band (home editorial line) ─────────────────────────────────────── */
+.quote-band .rule { width: 54px; height: 3px; background: var(--gold); border-radius: 2px; margin: 0 auto 18px; }
+.quote-band .quote { font-family: var(--f-display); font-size: clamp(1.3rem, 2.6vw, 2rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.25; color: var(--paper); margin: 0; }
+.quote-band .quote .accent { color: var(--gold); }
+
+/* ── CTA strip (original conversion band) ─────────────────────────────────── */
+.cta-strip-inner { display: flex; align-items: center; justify-content: space-between; gap: clamp(24px, 4vw, 44px); flex-wrap: wrap; }
+.cta-strip-inner h2 { margin: 0 0 12px; }
+.cta-strip-inner p { color: var(--muted); font-size: 15.5px; line-height: 1.7; max-width: 58ch; margin: 0; }
+.cta-strip-inner .btn { flex: none; }
+
+/* ── footer (original .footer / .top / .brandline / .legal) ───────────────── */
+.footer {
+  position: relative; z-index: 4;
+  background: rgba(8, 18, 34, 0.88);
+  -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+  border-top: 1px solid var(--hair);
+  padding: clamp(48px, 7vh, 80px) var(--pad) 0;
+  margin-top: clamp(40px, 6vh, 80px);
+}
+.footer .top { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 40px; padding-bottom: 40px; }
+.footer .brandline { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; margin-bottom: 14px; }
+.footer .brandline .mark { width: 30px; height: 33px; }
+.footer .brandline span { font-family: var(--f-display); font-size: 16px; font-weight: 700; color: var(--paper); }
+.footer p { font-size: 13.5px; line-height: 1.7; color: var(--muted); max-width: 42ch; margin: 0; }
+.footer h4 { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin: 0 0 14px; font-weight: 600; }
+.footer .footcol { display: grid; gap: 10px; align-content: start; }
+.footer .footcol a { font-size: 13.5px; color: var(--muted); text-decoration: none; transition: color 0.3s var(--ease); }
+.footer .footcol a:hover { color: var(--gold-soft); }
+.footer .legal {
+  display: flex; flex-wrap: wrap; gap: 10px 30px; justify-content: space-between;
+  padding: 20px 0 24px; border-top: 1px solid var(--hair-soft);
+  font-family: var(--f-mono); font-size: 9.5px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--dimmer);
+}
+.footer .legal .gold { color: var(--gold); }
+
+/* ── responsive for reconciled components ─────────────────────────────────── */
+@media (max-width: 960px) {
+  .split { grid-template-columns: 1fr; }
+  .grid, .framework-grid { grid-template-columns: repeat(2, 1fr); }
+  .people { grid-template-columns: 1fr; }
+  .footer .top { grid-template-columns: 1fr; gap: 28px; }
+}
+@media (max-width: 640px) {
+  .grid, .grid.grid-2, .grid.grid-4, .framework-grid { grid-template-columns: 1fr; }
+  .naics-row { grid-template-columns: 1fr; gap: 6px; }
+  .cta-strip-inner { flex-direction: column; align-items: flex-start; }
+  .doc-download { flex-direction: column; align-items: flex-start; }
+}
+.quote-band.center { text-align: center; border-left: 0; border-top: 4px solid var(--gold); border-radius: 12px; }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TYPOGRAPHY PASS
+   Audience is contracting officers, so the display scale is pulled back from
+   the launch-page setting: weight 800 is reserved for the one page-defining
+   h1, section headings drop to 700, and tracking is tightened without becoming
+   mannered. Figures go tabular wherever a CO reads a code.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* display scale — reduced top end, calmer tracking */
+.hero h1, .h1 {
+  font-size: clamp(2.3rem, 4.5vw, 3.7rem);
+  font-weight: 800;
+  letter-spacing: -0.021em;
+  line-height: 1.07;
+}
+.page-hero h1 {
+  font-size: clamp(1.95rem, 3.8vw, 2.85rem);
+  font-weight: 700;
+  letter-spacing: -0.017em;
+  line-height: 1.12;
+}
+.h2, .cta-band h2, .cta-strip-inner h2 {
+  font-size: clamp(1.6rem, 2.9vw, 2.28rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.17;
+}
+.h3 { font-weight: 700; letter-spacing: -0.005em; }
+.card h3, .card h4, .person h3, .framework-item h3, .cert-card h3 { letter-spacing: -0.004em; }
+
+/* ragging: no orphans in headings, cleaner rivers in body copy */
+h1, h2, .h1, .h2, .quote-band .quote, .pull-quote, .cta-strip-inner h2 { text-wrap: balance; }
+.lead, .card p, .person p, .framework-item p, .faq-a p, .doc-download p, .footer p { text-wrap: pretty; }
+
+/* body rhythm */
+.lead { line-height: 1.74; }
+.card p, .person p, .framework-item p { line-height: 1.72; }
+
+/* tabular figures for every identifier a contracting officer reads off the page */
+.naics-row .code, .data-grid dd, .stat-chip, .framework-num, .badge, .card .naics, .sam-panel {
+  font-variant-numeric: tabular-nums;
+}
+
+/* mono labels read as labels, not as spacing exercises */
+.eyebrow, .deliver-label, .footer h4 { letter-spacing: 0.22em; }
+.brand .name small { letter-spacing: 0.26em; }
