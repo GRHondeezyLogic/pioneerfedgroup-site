@@ -1,7 +1,7 @@
-/* ═══════════════════════════════════════════════════════════════════════════
-   PIONEER FEDERAL GROUP — glass over live shader wallpaper
-   Palette: navy #0C2340 · gold #C9A84C · soft gold #E3CD8B · paper #F5F2EA
-   ═══════════════════════════════════════════════════════════════════════════ */
+/* ===========================================================================
+   PIONEER FEDERAL GROUP - glass over live shader wallpaper
+   Palette: navy #0C2340 - gold #C9A84C - soft gold #E3CD8B - paper #F5F2EA
+   =========================================================================== */
 
 @font-face {
   font-family: "Geist Mono";
@@ -62,7 +62,7 @@ h1, h2, h3, h4, p, dl, dd, dt, ul, li { margin: 0; padding: 0; }
 ul { list-style: none; }
 img, svg { display: block; }
 
-/* ── the wallpaper ─────────────────────────────────────────────────────────── */
+/* ---- the wallpaper ---- */
 
 #stage {
   position: fixed;
@@ -86,7 +86,7 @@ body.is-live #stage { opacity: 1; }
     linear-gradient(180deg, rgba(6,15,30,0.55) 0%, rgba(6,15,30,0.28) 30%, rgba(6,15,30,0.42) 100%);
 }
 
-/* ── nav ───────────────────────────────────────────────────────────────────── */
+/* ---- nav ---- */
 
 .nav {
   position: fixed;
@@ -162,14 +162,14 @@ body.is-live #stage { opacity: 1; }
   cursor: pointer;
 }
 
-/* ── shared layout ─────────────────────────────────────────────────────────── */
+/* ---- shared layout ---- */
 
 main { position: relative; z-index: 4; }
 .wrap { max-width: 1120px; margin: 0 auto; }
 .section { padding: clamp(64px, 10vh, 120px) var(--pad); }
 .section.tight { padding-top: clamp(40px, 6vh, 72px); }
 
-/* frosted panel — the content layer that floats over the wallpaper */
+/* frosted panel - the content layer that floats over the wallpaper */
 .panel {
   background: var(--glass);
   -webkit-backdrop-filter: blur(18px) saturate(1.1);
@@ -255,7 +255,7 @@ main { position: relative; z-index: 4; }
 .inline-link { color: var(--gold); font-weight: 600; text-decoration: none; }
 .inline-link:hover { color: var(--gold-soft); text-decoration: underline; }
 
-/* ── hero (home) ───────────────────────────────────────────────────────────── */
+/* ---- hero (home) ---- */
 
 .hero { padding: clamp(130px, 20vh, 210px) var(--pad) clamp(48px, 7vh, 90px); }
 .hero .panel { padding: clamp(30px, 4.5vw, 60px); max-width: 860px; }
@@ -312,7 +312,7 @@ main { position: relative; z-index: 4; }
 }
 .stat-chip svg { width: 14px; height: 14px; }
 
-/* ── content sections over the wallpaper ───────────────────────────────────── */
+/* ---- content sections over the wallpaper ---- */
 
 .section .panel { padding: clamp(26px, 4vw, 52px); }
 
@@ -431,7 +431,7 @@ main { position: relative; z-index: 4; }
 .cta-band h2 .accent { color: var(--gold); }
 .cta-band p { color: var(--muted); font-size: 15.5px; line-height: 1.7; max-width: 58ch; margin: 0 auto 28px; }
 
-/* ── capability statement components ───────────────────────────────────────── */
+/* ---- capability statement components ---- */
 
 .pdfcard {
   margin-top: 30px;
@@ -517,7 +517,7 @@ main { position: relative; z-index: 4; }
 }
 .datagrid dd { font-size: 14px; font-weight: 600; color: var(--paper); }
 
-/* ── faq components ────────────────────────────────────────────────────────── */
+/* ---- faq components ---- */
 
 .acc { display: grid; gap: 10px; }
 .acc details {
@@ -575,7 +575,7 @@ main { position: relative; z-index: 4; }
   margin-right: 8px;
 }
 
-/* ── contact ───────────────────────────────────────────────────────────────── */
+/* ---- contact ---- */
 
 .contact-grid { display: grid; grid-template-columns: 1.55fr 1fr; gap: 20px; align-items: start; margin-top: 34px; }
 .contact-card {
@@ -637,7 +637,7 @@ main { position: relative; z-index: 4; }
 .form-status.show.error { background: rgba(220, 120, 95, 0.12); border: 1px solid rgba(220, 120, 95, 0.45); color: #E8A38C; }
 .h-captcha { min-height: 0; }
 
-/* ── footer ────────────────────────────────────────────────────────────────── */
+/* ---- footer ---- */
 
 .sitefoot {
   position: relative;
@@ -677,7 +677,7 @@ main { position: relative; z-index: 4; }
   color: var(--dimmer);
 }
 
-/* ── rotator (verbatim from current site behavior) ─────────────────────────── */
+/* ---- rotator (verbatim from current site behavior) ---- */
 
 .rotator { display: inline-grid; text-align: left; color: var(--gold); vertical-align: top; }
 .rotator > span {
@@ -698,12 +698,12 @@ main { position: relative; z-index: 4; }
 }
 .rotator > span.on::after { transform: scaleX(1); transition-delay: .45s; }
 
-/* ── scroll reveal (driven by the site's original rotate.js) ───────────────── */
+/* ---- scroll reveal (driven by the site's original rotate.js) ---- */
 
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
 .reveal.in { opacity: 1; transform: none; }
 
-/* ── responsive ────────────────────────────────────────────────────────────── */
+/* ---- responsive ---- */
 
 @media (max-width: 960px) {
   .two-col { grid-template-columns: 1fr; }
@@ -744,13 +744,13 @@ main { position: relative; z-index: 4; }
   #stage { transition: none; }
 }
 
-/* ═══════════════════════════════════════════════════════════════════════════
+/* ===========================================================================
    RECONCILED COMPONENTS
    The original site's box/section language, re-rendered on the glass system.
-   Additive only — nothing above this line was removed or altered.
-   ═══════════════════════════════════════════════════════════════════════════ */
+   Additive only - nothing above this line was removed or altered.
+   =========================================================================== */
 
-/* ── interior page hero (original .page-hero rhythm, shorter than home) ────── */
+/* ---- interior page hero (original .page-hero rhythm, shorter than home) ---- */
 .page-hero { padding: clamp(112px, 16vh, 168px) var(--pad) clamp(34px, 5vh, 58px); }
 .page-hero .panel { padding: clamp(28px, 4vw, 52px); max-width: 900px; }
 .page-hero h1 {
@@ -761,16 +761,16 @@ main { position: relative; z-index: 4; }
 }
 .page-hero h1 .accent { color: var(--gold); }
 
-/* ── section modifiers ────────────────────────────────────────────────────── */
+/* ---- section modifiers ---- */
 .section.alt > .wrap > .panel { background: var(--glass-2); }
 .section.roomy { padding-top: clamp(84px, 13vh, 148px); padding-bottom: clamp(84px, 13vh, 148px); }
 
-/* ── section head (eyebrow + h2 + deck) ───────────────────────────────────── */
+/* ---- section head (eyebrow + h2 + deck) ---- */
 .section-head { max-width: 64ch; margin-bottom: clamp(26px, 4vh, 44px); }
 .section-head h2 { margin-bottom: 14px; }
 .section-head p { color: var(--muted); font-size: clamp(15px, 1.1vw, 17px); line-height: 1.72; margin: 0; }
 
-/* ── eyebrow (original label above section headings) ──────────────────────── */
+/* ---- eyebrow (original label above section headings) ---- */
 .eyebrow {
   display: flex; align-items: center; gap: 10px;
   font-family: var(--f-mono); font-size: 10.5px; letter-spacing: 0.26em;
@@ -778,12 +778,12 @@ main { position: relative; z-index: 4; }
 }
 .eyebrow::before { content: ""; width: 26px; height: 1px; background: var(--gold); flex: none; }
 
-/* ── grids (original 3-up default, 2-up and 4-up variants) ────────────────── */
+/* ---- grids (original 3-up default, 2-up and 4-up variants) ---- */
 .grid { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
 .grid.grid-2 { grid-template-columns: repeat(2, 1fr); }
 .grid.grid-4 { grid-template-columns: repeat(2, 1fr); }
 
-/* ── NAICS badge on capability cards ──────────────────────────────────────── */
+/* ---- NAICS badge on capability cards ---- */
 .card .naics {
   display: inline-block; font-family: var(--f-mono); font-size: 10px;
   letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
@@ -794,17 +794,17 @@ main { position: relative; z-index: 4; }
 .card:hover .naics { background: var(--gold); color: var(--navy); }
 .card h3 { font-family: var(--f-display); font-size: 1.08rem; font-weight: 700; color: var(--paper); margin: 0 0 10px; }
 
-/* ── tick list (original bulleted value/delivery list) ────────────────────── */
+/* ---- tick list (original bulleted value/delivery list) ---- */
 .list { display: grid; gap: 16px; margin-top: 22px; }
 .list li { display: grid; grid-template-columns: 22px 1fr; gap: 14px; align-items: start; }
 .list .tick { width: 22px; height: 22px; margin-top: 3px; flex: none; }
 .list b { font-family: var(--f-display); color: var(--paper); font-weight: 700; }
 .list span { font-size: 15px; line-height: 1.72; color: var(--muted); }
 
-/* ── split (original two-column feature row) ──────────────────────────────── */
+/* ---- split (original two-column feature row) ---- */
 .split { display: grid; grid-template-columns: 1.25fr 0.95fr; gap: clamp(24px, 3.5vw, 48px); align-items: start; }
 
-/* ── leadership cards ─────────────────────────────────────────────────────── */
+/* ---- leadership cards ---- */
 .people { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .person {
   background: var(--glass-2);
@@ -821,7 +821,7 @@ main { position: relative; z-index: 4; }
 .person a { color: var(--gold); font-weight: 600; text-decoration: none; font-size: 14px; }
 .person a:hover { color: var(--gold-soft); }
 
-/* ── service framework (numbered 3-up) ────────────────────────────────────── */
+/* ---- service framework (numbered 3-up) ---- */
 .framework-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .framework-item {
   background: var(--glass-2);
@@ -834,7 +834,7 @@ main { position: relative; z-index: 4; }
 .framework-item h3 { font-family: var(--f-display); font-size: 1.05rem; font-weight: 700; color: var(--paper); margin: 0 0 10px; }
 .framework-item p { font-size: 14.5px; line-height: 1.7; color: var(--muted); margin: 0; }
 
-/* ── standard card + pull quote (about) ───────────────────────────────────── */
+/* ---- standard card + pull quote (about) ---- */
 .standard-card {
   background: var(--glass-2);
   -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
@@ -844,7 +844,7 @@ main { position: relative; z-index: 4; }
 .pull-quote { font-family: var(--f-display); font-size: clamp(1.05rem, 1.6vw, 1.32rem); font-weight: 600; line-height: 1.55; color: var(--paper); margin: 0 0 12px; }
 .standard-card cite { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; font-style: normal; color: var(--gold-soft); }
 
-/* ── NAICS table (capability statement) ───────────────────────────────────── */
+/* ---- NAICS table (capability statement) ---- */
 .naics-table {
   border: 1px solid var(--hair-soft); border-radius: 10px; overflow: hidden;
   background: var(--glass-2);
@@ -856,7 +856,7 @@ main { position: relative; z-index: 4; }
 .naics-row .code { font-family: var(--f-mono); font-size: 12.5px; letter-spacing: 0.08em; color: var(--gold); }
 .naics-row .title { font-size: 14.5px; color: var(--fg); }
 
-/* ── company data grid ────────────────────────────────────────────────────── */
+/* ---- company data grid ---- */
 .data-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1px; background: var(--hair-soft);
@@ -866,10 +866,10 @@ main { position: relative; z-index: 4; }
 .data-grid dt { font-family: var(--f-mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dimmer); margin-bottom: 6px; }
 .data-grid dd { font-size: 14px; font-weight: 600; color: var(--paper); margin: 0; }
 
-/* ── certification cards ──────────────────────────────────────────────────── */
+/* ---- certification cards ---- */
 .cert-card h3 { font-family: var(--f-display); font-size: 1.15rem; font-weight: 700; color: var(--paper); margin: 0 0 10px; }
 
-/* ── capability statement download block ──────────────────────────────────── */
+/* ---- capability statement download block ---- */
 .doc-download {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px;
   background: rgba(12, 35, 64, 0.82); border: 1px solid var(--hair);
@@ -879,7 +879,7 @@ main { position: relative; z-index: 4; }
 .doc-download p { font-size: 14px; line-height: 1.65; color: var(--muted); margin: 0; max-width: 54ch; }
 .doc-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
-/* ── FAQ accordion (original .faq-item / .faq-q / .faq-a structure) ───────── */
+/* ---- FAQ accordion (original .faq-item / .faq-q / .faq-a structure) ---- */
 .faq-list { display: grid; gap: 10px; }
 .faq-item {
   background: var(--glass-2);
@@ -903,18 +903,18 @@ main { position: relative; z-index: 4; }
 .faq-a a { color: var(--gold); font-weight: 600; text-decoration: none; }
 .faq-a a:hover { text-decoration: underline; }
 
-/* ── quote band (home editorial line) ─────────────────────────────────────── */
+/* ---- quote band (home editorial line) ---- */
 .quote-band .rule { width: 54px; height: 3px; background: var(--gold); border-radius: 2px; margin: 0 auto 18px; }
 .quote-band .quote { font-family: var(--f-display); font-size: clamp(1.3rem, 2.6vw, 2rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.25; color: var(--paper); margin: 0; }
 .quote-band .quote .accent { color: var(--gold); }
 
-/* ── CTA strip (original conversion band) ─────────────────────────────────── */
+/* ---- CTA strip (original conversion band) ---- */
 .cta-strip-inner { display: flex; align-items: center; justify-content: space-between; gap: clamp(24px, 4vw, 44px); flex-wrap: wrap; }
 .cta-strip-inner h2 { margin: 0 0 12px; }
 .cta-strip-inner p { color: var(--muted); font-size: 15.5px; line-height: 1.7; max-width: 58ch; margin: 0; }
 .cta-strip-inner .btn { flex: none; }
 
-/* ── footer (original .footer / .top / .brandline / .legal) ───────────────── */
+/* ---- footer (original .footer / .top / .brandline / .legal) ---- */
 .footer {
   position: relative; z-index: 4;
   background: rgba(8, 18, 34, 0.88);
@@ -932,7 +932,7 @@ main { position: relative; z-index: 4; }
 .footer .footcol { display: grid; gap: 10px; align-content: start; }
 .footer .footcol a { font-size: 13.5px; color: var(--muted); text-decoration: none; transition: color 0.3s var(--ease); }
 .footer .footcol a:hover { color: var(--gold-soft); }
-/* LinkedIn glyph in the footer contact column — outline circle, gold "in" */
+/* LinkedIn glyph in the footer contact column - outline circle, gold "in" */
 .footer .footcol a.li-glyph { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border: 1px solid var(--hair); border-radius: 50%; color: var(--gold); background: transparent; transition: color 0.3s var(--ease), border-color 0.3s var(--ease), background 0.3s var(--ease); }
 .footer .footcol a.li-glyph:hover { color: var(--gold-soft); border-color: var(--gold); background: rgba(201, 168, 76, 0.10); }
 .footer .footcol a.li-glyph svg { display: block; }
@@ -944,7 +944,7 @@ main { position: relative; z-index: 4; }
 }
 .footer .legal .gold { color: var(--gold); }
 
-/* ── responsive for reconciled components ─────────────────────────────────── */
+/* ---- responsive for reconciled components ---- */
 @media (max-width: 960px) {
   .split { grid-template-columns: 1fr; }
   .grid, .framework-grid { grid-template-columns: repeat(2, 1fr); }
@@ -959,15 +959,15 @@ main { position: relative; z-index: 4; }
 }
 .quote-band.center { text-align: center; border-left: 0; border-top: 4px solid var(--gold); border-radius: 12px; }
 
-/* ═══════════════════════════════════════════════════════════════════════════
+/* ===========================================================================
    TYPOGRAPHY PASS
    Audience is contracting officers, so the display scale is pulled back from
    the launch-page setting: weight 800 is reserved for the one page-defining
    h1, section headings drop to 700, and tracking is tightened without becoming
    mannered. Figures go tabular wherever a CO reads a code.
-   ═══════════════════════════════════════════════════════════════════════════ */
+   =========================================================================== */
 
-/* display scale — reduced top end, calmer tracking */
+/* display scale - reduced top end, calmer tracking */
 .hero h1, .h1 {
   font-size: clamp(2.3rem, 4.5vw, 3.7rem);
   font-weight: 800;
