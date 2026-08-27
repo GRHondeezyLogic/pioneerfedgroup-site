@@ -9,7 +9,7 @@ export class Renderer {
     this.canvas = canvas;
     this.u = new Float32Array(28);          // 7 × vec4
     this.scale = 1;
-    this.maxScale = Math.min(window.devicePixelRatio || 1, 1.6);
+    this.maxScale = Math.min(window.devicePixelRatio || 1, 1.0);
     this.quality = 1;
     this.fps = 60;
     this._acc = 0;
