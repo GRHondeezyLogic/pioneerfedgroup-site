@@ -189,8 +189,6 @@ export class Renderer {
     pass(this.vA, this.pBright, this.bgBright);
     pass(this.vB, this.pBlurH, this.bgAB);
     pass(this.vA, this.pBlurV, this.bgBA);
-    pass(this.vB, this.pBlurH, this.bgAB);
-    pass(this.vA, this.pBlurV, this.bgBA);
     pass(this.ctx.getCurrentTexture().createView(), this.pComp, this.bgComp);
 
     d.queue.submit([enc.finish()]);
