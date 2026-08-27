@@ -1005,3 +1005,38 @@ h1, h2, .h1, .h2, .quote-band .quote, .pull-quote, .cta-strip-inner h2 { text-wr
 /* mono labels read as labels, not as spacing exercises */
 .eyebrow, .deliver-label, .footer h4 { letter-spacing: 0.22em; }
 .brand .name small { letter-spacing: 0.26em; }
+
+/* ---------------------------------------------------------------------------
+   PERF: disable backdrop-filter while the live shader canvas is animating.
+   Over a static background the browser caches each glass panel's blur; over a
+   canvas repainting every frame, all 23 blur declarations re-run per frame and
+   cost about as much as the shader itself. bg.js adds body.is-live only after
+   the GPU warm-up succeeds and removes it in fallback(), so this override
+   switches itself off automatically whenever the shader is not running — the
+   frosted look is preserved exactly when it is cheap. Do not delete this block.
+   Panels lose their blur here, so the glass tints are also raised under the
+   same scope to keep them reading as solid panels instead of thin film.
+--------------------------------------------------------------------------- */
+body.is-live {
+  --glass: rgba(9, 22, 42, 0.88);
+  --glass-2: rgba(13, 31, 57, 0.80);
+}
+
+body.is-live .nav,
+body.is-live .panel,
+body.is-live .card,
+body.is-live .mark-panel,
+body.is-live .quote-band,
+body.is-live .tablewrap,
+body.is-live .acc details,
+body.is-live .contact-card,
+body.is-live .sitefoot,
+body.is-live .person,
+body.is-live .framework-item,
+body.is-live .standard-card,
+body.is-live .naics-table,
+body.is-live .faq-item,
+body.is-live .footer {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
