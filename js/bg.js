@@ -68,7 +68,10 @@ async function start() {
   }, { passive: true });
 
   let prev = performance.now();
+  let running = true;
+  let slowSince = 0;
   const frame = (now) => {
+    if (!running) return;
     requestAnimationFrame(frame);
     const dt = Math.min((now - prev) / 1000, 0.05);
     prev = now;
@@ -82,6 +85,18 @@ async function start() {
     state.shift = lerp(state.shift, wide && mode === 'scroll' ? 0.3 : 0, k);
     state.shiftY = lerp(state.shiftY, wide ? 0 : 0.35, k);
     renderer.render(state, dt);
+
+    // WebGPU is present but this GPU cannot keep up. Three seconds under 30fps
+    // and we drop to the static navy gradient rather than stuttering forever.
+    if (renderer.fps < 30) {
+      if (!slowSince) slowSince = now;
+      else if (now - slowSince > 3000) {
+        running = false;
+        fallback(new Error('GPU too slow for the live scene'));
+      }
+    } else {
+      slowSince = 0;
+    }
   };
   addEventListener('resize', () => renderer.resize());
   sampleScroll();
